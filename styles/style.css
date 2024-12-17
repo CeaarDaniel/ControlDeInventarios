@@ -1,0 +1,512 @@
+*{
+    font-family: 'Font Awesome 5 Free';
+}
+
+::selection {
+  background-color: #198754;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+  .boton{
+    background-color: #141073;
+    color: #fff;
+  }
+  
+  .boton:hover{
+    background-color: #0216888a;
+    color: #fff;
+  }
+  
+  .boton:focus {
+    box-shadow: 0 0 0 0.25rem #c4dde9;
+  }
+
+  .btnBuscar{
+    background-color:#ECE6F0; 
+    color:#4F378B;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.548);
+    border-radius: 20px;
+  }
+
+  .btnBuscar:hover{
+    background-color:#cac3ce; 
+    color:#3e1e8d;
+    
+  }
+
+/*Boton volver*/
+    .volver{
+      color: #ffffff; /* Color del texto */
+      background-color:rgba(255, 255, 255, 0);
+      border-radius: 100%; /* Borde del boton */
+      border-color: #141073;
+      padding: 3px; /* Relleno del boton */
+      position: fixed;
+      bottom: 40px;
+      right: 70px;
+      transition: all 300ms ease 0ms;
+    }
+
+    .volver:hover {
+      transform: translateY(-7px);
+    }
+/*fin Boton volver*/
+
+/*Boton flotante*/
+.btnfloat{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  transition: all 300ms ease 0ms;
+}
+
+.btnfloat:hover{
+  transform: translateY(-7px);
+}
+/*Fin del boton flotante*/
+
+/*Estilos para los scroll*/
+    *::-webkit-scrollbar {
+      width: 7px; /*ancho del scroll*/
+      height: 7px; /*Alto del scroll esto sirve para la barra horizontal*/
+    }
+
+    /* estilo para la parte que puedes arrastrar*/
+    *::-webkit-scrollbar-thumb {
+      background-color: #79797980;
+      border-radius: 20px;
+      border:rgb(255, 255, 255)
+    }
+
+    /*estilo del fondo del scroll */
+    *::-webkit-scrollbar-track {
+      border-radius: 1px;  
+      background-color:rgb(255, 255, 255)
+    }
+
+    /*estilo del scroll para firefox*/
+
+/*--- Fin estilos para los scroll ---*/
+
+
+/*----header----*/
+.header{
+    background-color:white;
+    position: fixed;
+    width: 100%;
+  }
+
+  .header a{
+    background-color:white; 
+    height:100%
+  }
+
+  /*Tamaño de fuente responsiva para el titulo principal de la pagina*/
+        .fsr-1{
+          font-size: 25px;
+        }
+
+        @media(max-width:481px) {
+          .fsr-1{
+            font-size: 17px;
+          }
+        }
+
+        @media(max-width:374px) {
+          .fsr-1{
+            font-size: 12px;
+          }
+        }
+
+        @media(max-width:270px) {
+          .fsr-1{
+            font-size: 8px;
+          }
+        }
+  /* Fin tamaño de fuente responsiva para el titulo principal de la pagina*/
+
+  /*Tamaño de fuente para el texto de parrafo de la pagina*/
+        .fsr-2{
+          font-size: 16px;
+        }
+
+        @media(max-width:481px) {
+          .fsr-2{
+            font-size: 12px;
+          }
+        }
+
+        @media(max-width:374px) {
+          .fsr-2{
+            font-size: 10px;
+          }
+        }
+
+        @media(max-width:270px) {
+          .fsr-2{
+            font-size: 8px;
+          }
+        }
+  /*Fin tamaño de fuente para el texto de parrafo de la pagina*/
+
+/*----fin header----*/
+
+/*----estilo para la barra de navegacion navbar----*/
+    .navbar {
+        width: 60px;
+        height: 100%;
+        position: fixed;
+        margin-left: 0px;
+        background-color: #07038B;
+        transition: 0.4s;
+        overflow-y: auto; /*scroll para la barra de navegacion*/
+       
+        border-top-right-radius: 0px; /* Redondear la esquina superior derecha */
+        z-index:5;  /*Agrega capas mientras mas alto el numero se sobrepondra a valores de un indice menor
+        en este caso como es el unico z-index se sobrepondra a todas las etiquetas*/ 
+      }
+      
+    .navbar:hover{
+      border-top-right-radius: 25px;
+    }
+      
+
+      /*Estilo del scroll para ek nav*/
+          .navbar::-webkit-scrollbar {
+            width: 0px; /*ancho del scroll*/
+            height: 0px; /*Alto del scroll esto sirve para la barra horizontal*/
+          }
+
+          .navbar:hover::-webkit-scrollbar {
+            width: 7px; /*ancho del scroll*/
+            height: 7px; /*Alto del scroll esto sirve para la barra horizontal*/
+          }
+
+          .active-nav {
+            width: 110px;
+          }
+      /*Fin del estilo del scroll para ek nav*/  
+
+
+      @media (max-width:767px) { /*este numero tiene que ser menor o mayor al siguiente media pero no igual*/
+        .navbar {
+          margin-left: -300px;
+          border-top-right-radius: 25px;
+        }
+
+        .active-nav {
+          margin-left: 0px;
+        }  
+
+        #menu-btn, #closeMenu-btn{
+          opacity: 1; /* Hace el elemento invisible */
+          display: auto; /* Impide la interacción */
+        }
+      }
+
+      /*estilo del contenedor del contenido principal*/
+      @media (min-width:768px) {
+        .main.active-cont {  /*Esto .main.active-cont hace que se reescriban las propiedades para la clase .main tiene que estar junto y espaciado para que funcione*/
+          margin-left: 100px;  /*en una pantalla mayor a un 768 tendra un margen de 300 en pantallas mas chicas sera de cero entonces la barra de navegacion se sobrepondra al contenido en pantallas mas pequeñas*/
+        }
+
+        #menu-btn, #closeMenu-btn{
+          opacity: 0; /* Hace el elemento invisible */
+          display: none; /* Impide la interacción */
+        }
+      }
+
+      #menu-btn:hover{
+        background-color:#08038b36;
+      }
+
+      .nav-item a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .nav-item a:hover{
+        color: white; 
+        background-color:rgba(0, 0, 0, 0.596);
+        border-radius: 100px;
+      }
+
+
+      .icono{
+        color: white; 
+        background-color:none
+      }
+
+      .textoMenu{
+        width:100%;
+        color: white;
+        font-size: 8px;
+      }
+  
+/*---fin estilo de la barra de navegacion---*/
+
+
+/*----Estilos para el contenedor del contenido----*/
+.main {
+    transition: 0.4s;
+    overflow-y: auto;
+    margin-left: 50px;
+  }
+
+  @media(max-width:767px){
+    .main{  
+          transition: 0.4s;
+          overflow-y: auto;
+          margin-left: 0px;
+        }
+
+        .btnBuscar span{ /*Desaparece el texto del boton flotante buscar al achicarse el tamaño del a ventana*/
+              display: none;
+        }
+  }
+
+    /*Transicion al cambiar de pagina con ajax*/
+          .contenido{
+            transition: 0.4s ease;
+            margin-top:80px;
+          }
+
+          .ocultar{
+            transform: scale(0);
+            transition: transform 0.4s ease-in-out;
+          }
+    /*fin efecto para la transicion*/  
+
+/*---fin estilo contenedor---*/
+
+
+/*Estilos del formulario*/
+      form{
+         transition: 0.2s ease ;
+         opacity: 1;
+         font-size: 17px;
+      }
+
+      @media (max-width:452px) { /*este numero tiene que ser menor o mayor al siguiente media pero no igual*/
+        form {
+          font-size: 3.5vw;
+        }
+      }
+
+      input{
+        transition: 0.4s ease-in-out;
+        border: 1px solid #4F378B;
+        margin-top: 5px;
+        border-radius: 8px;
+        height: 30px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900; /* Esto es necesario para mostrar el icono correctamente */
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Reset de estilos para input */
+      input:focus {
+        border: none;
+        outline: none;
+        background: none;
+      }
+
+
+      input:focus::placeholder {
+        /* Estilos para el placeholder cuando el input está enfocado */
+        color: transparent; /* Ocultar el texto del placeholder cuando está enfocado */
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        }
+
+      .invalido {
+        border-color: rgb(255, 0, 0);
+      }
+
+      textarea{
+        transition: 0.4s ease-in-out;
+        border: 0px;
+        margin-top: 5px;
+        border-bottom: 1px solid #021f6e57; /* Establece el borde inferior */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900; /* Esto es necesario para mostrar el icono correctamente */
+      }
+    
+
+      select {
+        transition: 0.4s ease-in-out;
+        border: 1px solid #4F378B;
+        margin-top: 5px;
+        border-radius: 8px; /* Establece el borde inferior */
+        font-family: 'Font Awesome 5 Free';
+
+      }
+      
+      .in:focus {
+        /* Estilo cuando el input está seleccionado */
+        color: #4F378B;
+        outline: 0;
+        box-shadow: 0 0 0 0.13rem #021f6e57;
+        border-radius: 8px;
+        margin-left: 5px;
+      }
+
+      .radio {
+        appearance: none;
+
+        top: 4px;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+      
+        border: 2px solid #021f6e57;;
+        transition: 0.2s all linear;
+        margin-left: 10px;
+        font-family: 'Font Awesome 5 Free';
+      
+        position: relative;
+        top: 1px;
+      }
+      
+      .radio:checked {
+        border: 5px solid #021e6e;
+      }
+      
+      .form-check-label{
+        font-family: 'Font Awesome 5 Free';
+        user-select: none;
+      }
+
+      .check{
+        top: 4px;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #021f6e57;;
+        transition: 0.2s all linear;
+        margin-left: 10px;
+        position: relative;
+        top: 1px;
+      }        
+/*Fin de los estilos del formulario*/
+
+
+/*--- ESTILOS DEL INDEX ---*/
+    .formBuscarPieza{
+      width:60%
+    }
+
+    @media (max-width:768px){
+      .formBuscarPieza{
+        width:100%;
+      }
+  }
+
+  @media (max-width:576px){
+    input{
+      width: 100%;
+    }
+}
+
+.iconoResumen{
+  font-size:30px;
+}
+
+.iconoResumen:hover{
+ color: #4F378B;
+}
+
+
+canvas {
+  width: 100%;
+  height: 300px;
+}
+/*---FIN DEL ESTILO DEL INDEX ---*/
+
+
+/*ESTILOS DEL CATALOGO*/
+    .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    position: relative;
+    }
+
+    .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(102, 80, 164, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    }
+
+    .circle.active {
+    background-color: #6750A4;
+    transition: background-color 2s ease;
+    }
+
+    .line {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #B9B9B9;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    }
+
+    .line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #6750A4;
+    transition: width 0.4s ease;
+    }
+
+    .line.active::after {
+    width: 100%;
+    }
+
+    #modalAgregarPieza .modal-content{
+      height:100%; 
+      border-radius:25px
+    }
+
+    @media (min-height:768px) {
+      #modalAgregarPieza .modal-content{ 
+        height: 850px;
+      }
+    }
+
+    @media (max-height:500px) {
+        .modal-dialog-scrollable {
+          overflow-y: hidden;
+        }
+      }
+    
+      .menuOption{
+        transition: 0.5s ease;
+      }
+
+      .menuOption:hover{
+        background-color: black;
+        color: white;
+        border-color: black !important;
+      }
+/*FIN ESTILOS DEL CATALOGO*/
