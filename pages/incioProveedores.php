@@ -8,41 +8,39 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <div class="modal-body">
-
-        <div class="d-flex justify-content-center" style="width:100%">
-            <!--Fomulario editar proveedor -->
-                <form id="RegistroProveedores" class="formBuscarPieza" style="width:100%">
-                    <div class="row">
-                        <div class="col-12 col-sm-6">
-                            <label for=""><b>Nombre o Razón Social</b></label> <br>
-                            <input type="text" placeholder="nombre">
+            <div class="d-flex justify-content-center" style="width:100%">
+                <!--Fomulario editar proveedor -->
+                    <form id="RegistroProveedores" class="formBuscarPieza" style="width:100%">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label for=""><b>Nombre o Razón Social</b></label> <br>
+                                <input type="text" placeholder="nombre">
+                            </div>
+                            <div class="col-12 col-sm-6 my-1">
+                                <label for="text"><b>Número/Identificación Fiscal </b></label> <br>
+                                <input id="" name="" type="text" class="in icon-input" placeholder=" identificacion fiscal" maxlength="">
+                            </div>
+                            <div class="col-12 col-sm-6 my-1">
+                                <label for="text"><b>Direccion</b></label><br>
+                                <input id="" name="" type="text" class="in icon-input" placeholder="direccion" maxlength="">
+                            </div>
+                            <div class="col-12 col-sm-6 my-1">
+                                <label for="text"><b>Teléfono de Contacto</b></label><br>
+                                <input id="" name="" type="text" class="in icon-input" placeholder="telefono de contacto" maxlength="">
+                            </div>
+                            <div class="col-12 col-sm-6 my-1">
+                                <label for="text"><b>Correo electrónico</b></label><br>
+                                <input id="" name="" type="text" class="in icon-input" placeholder="correo electronico" maxlength="">
+                            </div>
                         </div>
-                        <div class="col-12 col-sm-6 my-1">
-                            <label for="text"><b>Número/Identificación Fiscal </b></label> <br>
-                            <input id="" name="" type="text" class="in icon-input" placeholder=" identificacion fiscal" maxlength="">
+                        
+                        <div class="d-flex justify-content-center my-2" style="width:100%">
+                            <button class="btn boton" type="button"><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Registrar
+                            </button>
                         </div>
-                        <div class="col-12 col-sm-6 my-1">
-                            <label for="text"><b>Direccion</b></label><br>
-                            <input id="" name="" type="text" class="in icon-input" placeholder="direccion" maxlength="">
-                        </div>
-                        <div class="col-12 col-sm-6 my-1">
-                            <label for="text"><b>Teléfono de Contacto</b></label><br>
-                            <input id="" name="" type="text" class="in icon-input" placeholder="telefono de contacto" maxlength="">
-                        </div>
-                        <div class="col-12 col-sm-6 my-1">
-                            <label for="text"><b>Correo electrónico</b></label><br>
-                            <input id="" name="" type="text" class="in icon-input" placeholder="correo electronico" maxlength="">
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-center my-2" style="width:100%">
-                        <button class="btn boton" type="button"><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Registrar
-                        </button>
-                    </div>
-                </form>
-            <!--Fomulario editar proveedor -->
-        </div>
-
+                    </form>
+                <!--Fomulario editar proveedor -->
+            </div>
         </div>
     </div>
   </div> 
@@ -78,7 +76,9 @@
             </div>
             
             <div class="d-flex justify-content-center my-2" style="width:100%">
-                <button class="btn boton" type="button"><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Registrar
+                <button class="btn boton" type="button">
+                    <i class="fa fa-cash-register mx-1 py-1" style="font-size:20px;"></i> 
+                    <span>Registrar</span>
                 </button>
             </div>
         </form>

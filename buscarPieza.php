@@ -9,7 +9,7 @@
                 <div class="col-12 col-sm-6">
                     <label for=""><b>CATEGORÍA DE LA PIEZA </b></label> <br>
                     <select class="in mt-3" name="categoriaPieza" id="categoriaPieza">
-                        <option value="" selected>&#xf002; --- CATEGORÍA---</option>
+                        <option value="" selected>&#xf02c; --- CATEGORÍA  ---</option>
                         <option value="1">CATEGORIA 1</option>
                         <option value="2">CATEGORIA 2</option>
                         <option value="3">CATEGORIA 3</option>
@@ -19,23 +19,23 @@
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>NOMBE DE LA PIEZA</b></label> <br>
-                    <input id="agencia" name="agencia" type="text" class="in icon-input" placeholder=" Nombre" maxlength="">
+                    <input id="nombrePieza" name="nombrePieza" type="text" class="in icon-input" placeholder="&#xf02d; Nombre" maxlength="">
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>LINEA</b></label><br>
-                    <input id="agencia" name="agencia" type="text" class="in icon-input" placeholder="Linea" maxlength="">
+                    <input id="linea" name="linea" type="text" class="in icon-input" placeholder="&#xf238; Linea" maxlength="">
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>PROCESO</b></label><br>
-                    <input id="agencia" name="agencia" type="text" class="in icon-input" placeholder="Proceso" maxlength="">
+                    <input id="proceso" name="proceso" type="text" class="in icon-input" placeholder="&#xf162; Proceso" maxlength="">
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>RACK</b></label><br>
-                    <input id="agencia" name="agencia" type="text" class="in icon-input" placeholder="Rack" maxlength="">
+                    <input id="rack" name="rack" type="text" class="in icon-input" placeholder="&#xf233; Rack" maxlength="">
                 </div>
             </div>
             <div class="d-flex justify-content-center mt-3" style="width:100%">
-                <button class="btn btnBuscar" type="button" ><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Buscar</button>
+                <button id="btnBuscar" name="btnBuscar" class="btn btnBuscar" type="button" ><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Buscar</button>
             </div>
         </form>
     </div>

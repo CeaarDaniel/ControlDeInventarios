@@ -7,192 +7,195 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <div class="modal-body">
-            <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
-                <div class="seccion" id="seccion1">
-                    <div class="row px-0 mx-0 my-1">
-                        <div class="col-12 d-flex justify-content-center px-0">
-                            <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
+            <!--Formulario para agregar un item -->
+                <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
+                    
+                    <div class="seccion" id="seccion1">
+                        <div class="row px-0 mx-0 my-1">
+                            <div class="col-12 d-flex justify-content-center px-0">
+                                <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <select class="in mt-3" name="categoriaPieza" id="categoriaPieza">
+                                    <option value="" selected>--- CATEGORÍA  ---</option>
+                                    <option value="1">CATEGORIA 1</option>
+                                    <option value="2">CATEGORIA 2</option>
+                                    <option value="3">CATEGORIA 3</option>
+                                    <option value="4">CATEGORIA 4</option>
+                                    <option value="5">CATEGORIA 5</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <select class="in py-1" name="categoriaPieza" id="categoriaPieza">
-                                <option value="" selected>&#xf002; --- CATEGORÍA---</option>
-                                <option value="1">HOLDERS</option>
-                                <option value="2">HERRAMIENTAS</option>
-                                <option value="3">REFACCIONES</option>
-                                <option value="4">INSERTOS</option>
-                                <option value="5">CONSUMIBLES</option>
-                            </select>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>Nombre</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="nombrePieza" id="nombrePieza" placeholder="&#xf02d; Nombre">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>Costo</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="costoPieza" id="costoPieza" placeholder="&#xf155; Costo">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>Codigo</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="codigoPieza" id="codigoPieza" placeholder="&#xf02a codigo">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>Stock inicial</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="stock" id="stock" placeholder="&#xf01c; stock">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                            <label><b>Inventariable</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                    <div>
+                                        <input class="radio" type="radio" name="filtroSQ" id="filtroSQ1" value="S" checked>
+                                        <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
+                                    </div>
+                                
+                                    <div>
+                                        <input class="radio" type="radio" name="filtroSQ" id="filtroSQ2" value="N">
+                                        <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="seccion" id="seccion2" style="display:none;">
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>INCERTO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="incerto" id="incerto" placeholder="&#xf0d0; Incerto">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>PROCESO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="proceso" id="proceso" placeholder="&#xf162; Proceso">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>LINEA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="linea" id="linea" placeholder="&#xf238; Linea">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>RACK</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="rack" id="rack" placeholder="&#xf233; Rack">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="seccion" id="seccion3" style="display:none;">
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>MINIMO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="minimo" id="minimo" placeholder="&#xf063; Minimo">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>MAXIMO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="maximo" id="maximo" placeholder="&#xf062; Maximo">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>TIEMPO DE VIDA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="tiempoVida" id="tiempoVida" placeholder="&#xf252 Tiempo de vida">
+                            </div>
+                        </div>
+
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>PUNTOS DE REORDEN</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="puntosReorden" id="puntosReorden" placeholder="&#xf021 Puntos de reorden">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>Nombre</b></label>
+                    <div class="seccion" id="seccion4" style="display:none;">
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>TIEMPO DE ENTREGA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="" id="">
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="nombre" id="nombre">
-                        </div>
-                    </div>
 
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>Costo</b></label>
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>MARCA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="" id="">
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
 
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>Codigo</b></label>
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>PROVEEDOR</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="" id="">
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
 
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>Stock inicial</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                           <label><b>Inventariable</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                                <div>
-                                    <input class="radio" type="radio" name="filtroSQ" id="filtroSQ1" value="S" checked>
-                                    <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
-                                </div>
-                            
-                                <div>
-                                    <input class="radio" type="radio" name="filtroSQ" id="filtroSQ2" value="N">
-                                    <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
-                                </div>
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>TIPO DE REFACCION</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="" id="">
+                            </div>
                         </div>
                     </div>
-                </div>
-            
-                <div class="seccion" id="seccion2" style="display:none;">
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>INCERTO</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>PROCESO</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>LINEA</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>RACK</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="seccion" id="seccion3" style="display:none;">
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>MINIMO</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>MAXIMO</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>TIEMPO DE VIDA</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>PUNTOS DE REORDEN</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="seccion" id="seccion4" style="display:none;">
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>TIEMPO DE ENTREGA</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>MARCA</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>PROVEEDOR</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-
-                    <div class="row px-0 mx-0 my-3">
-                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>TIPO DE REFACCION</b></label>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <input class="in" name="" id="">
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            <!--Fin del formulario para agregar un item -->
         </div>
         <div class="modal-footer py-1" style="border: 0px solid white;">
                 <div class="d-flex justify-content-center" style="width:100%"> 
@@ -487,154 +490,160 @@
 
     <script>
         // Datos simulados
-        const items = Array.from({ length: 100}, (_, i) => `Elemento ${i + 1}`);
-        const resultsPerPage = 9;
-        let currentPage = 1;
+            const items = Array.from({ length: 100}, (_, i) => `Elemento ${i + 1}`);
+            const resultsPerPage = 9;
+            let currentPage = 1;
 
-        // Función para mostrar los divs
-        function displayItems(page) {
+        // Función para mostrar los divs de los items
+            function displayItems(page) {
 
-            const formDataPa = new FormData();
-            formDataPa.append('opcion','21');
+                const formDataPa = new FormData();
 
-            fetch("./base_de_datos/operaciones_prestamos.php", {
-                method: "POST",
-                body: formDataPa,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    items = data
+                fetch("./base_de_datos/operaciones_prestamos.php", {
+                    method: "POST",
+                    body: formDataPa,
                 })
-                .catch((error) => {
-                console.log("Error:", error);
-                });
+                    .then((response) => response.json())
+                    .then((data) => {
+                        items = data
+                    })
+                    .catch((error) => {
+                    console.log("Error:", error);
+                    });
 
-            const start = (page - 1) * resultsPerPage;
-            const end = start + resultsPerPage;
-            const paginatedItems = items.slice(start, end);
-            const container = document.getElementById('itemContainer');
-            container.innerHTML = ''; // Limpiar contenido anterior
+                const start = (page - 1) * resultsPerPage;
+                const end = start + resultsPerPage;
+                const paginatedItems = items.slice(start, end);
+                const container = document.getElementById('itemContainer');
+                container.innerHTML = ''; // Limpiar contenido anterior
 
-            paginatedItems.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'col-12 col-md-6 col-lg-4 mb-4';
-                div.innerHTML = `<div class="border border-1 border-dark">
-                                    <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
-                                        <p class="py-0 my-0"> <b>${item} </b></p>
-                                        <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                <span class="p-0 m-0">Editar<span>
-                                        </button>
-                                    </div>
+                    //Listado de los items registrados del catalogo
+                        paginatedItems.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                            div.innerHTML = `<div class="border border-1 border-dark">
+                                                <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
+                                                    <p class="py-0 my-0"> <b>${item} </b></p>
+                                                    <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                            <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                            <span class="p-0 m-0">Editar<span>
+                                                    </button>
+                                                </div>
 
-                                    <div class="d-flex justify-content-between px-2" style="width:100%" >
-                                       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
-                                    </div>
+                                                <div class="d-flex justify-content-between px-2" style="width:100%" >
+                                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
+                                                </div>
 
-                                    <div class="d-flex justify-content-start px-2 py-2">
-                                        <img src="../img/imagen.png" style="width: 100px; height:100px">
-                                    </div>
-                                </div>`;
+                                                <div class="d-flex justify-content-start px-2 py-2">
+                                                    <img src="../img/imagen.png" style="width: 100px; height:100px">
+                                                </div>
+                                            </div>`;
 
-                container.appendChild(div);
-            });
+                            container.appendChild(div);
+                        });
+                    //Fin Listado de los items registrados del catalogo
+                    
+                    updatePagination();
+                }
+        //Fin funcion para mostrar los divs de los items 
 
-            updatePagination();
-        }
 
         // Función para actualizar la paginación
-        function updatePagination() {
-                const paginationContainer = document.getElementById('pagination');
-                paginationContainer.innerHTML = ''; // Limpiar contenido anterior
-                const totalPages = Math.ceil(items.length / resultsPerPage);
+            function updatePagination() {
+                    const paginationContainer = document.getElementById('pagination');
+                    paginationContainer.innerHTML = ''; // Limpiar contenido anterior
+                    const totalPages = Math.ceil(items.length / resultsPerPage);
 
-                for (let page = 1; page <= totalPages; page++) {
-                    const li = document.createElement('li');
-                    li.className = `page-item ${page === currentPage ? 'active' : ''}`;
-                    li.innerHTML = `<a class='page-link' href='#'>${page}</a>`;
-                    li.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        currentPage = page;
-                        displayItems(currentPage);
-                    });
-                    paginationContainer.appendChild(li);
+                    for (let page = 1; page <= totalPages; page++) {
+                        const li = document.createElement('li');
+                        li.className = `page-item ${page === currentPage ? 'active' : ''}`;
+                        li.innerHTML = `<a class='page-link' href='#'>${page}</a>`;
+                        li.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            currentPage = page;
+                            displayItems(currentPage);
+                        });
+                        paginationContainer.appendChild(li);
+                    }
                 }
+
+            // Inicializar la vista
+            displayItems(currentPage);
+        //Fin de la funcion para actualizar la paginacion
+
+        
+        // Interaccion del formulario para registrar un item
+            const circles = document.querySelectorAll('.circle');
+            const lines = document.querySelectorAll('.line');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const sendBtn = document.getElementById('sendBtn');
+            var miFormulario = document.getElementById('miFormulario');
+
+            let currentStep = 0;
+
+            function updateProgress() {
+
+                    circles.forEach((circle, index) => {
+                        if (index <= currentStep) 
+                            circle.classList.add('active');
+                            
+                        else 
+                            circle.classList.remove('active');
+                            
+                    });
+
+                    lines.forEach((line, index) => {
+                        if (index < currentStep) 
+                            line.classList.add('active');
+                        else 
+                            line.classList.remove('active');
+                        
+                    });
+
+                    prevBtn.disabled = currentStep === 0;
+                    nextBtn.disabled = currentStep === circles.length - 1;
+                    
+                        if(currentStep == (circles.length - 1)) {
+                            sendBtn.style.display=' inline'
+                            nextBtn.style.display = 'none'; 
+                        }
+
+                        else {
+                                sendBtn.style.display = 'none'; 
+                                nextBtn.style.display = 'inline'; 
+                            }
             }
 
-        // Inicializar la vista
-        displayItems(currentPage);
+            prevBtn.addEventListener('click', () => {
+                miFormulario.style.opacity=0
+                setTimeout(function() {
+                        document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
+                        document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";              
 
-
-        const circles = document.querySelectorAll('.circle');
-        const lines = document.querySelectorAll('.line');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const sendBtn = document.getElementById('sendBtn');
-        var miFormulario = document.getElementById('miFormulario');
-
-        let currentStep = 0;
-
-        function updateProgress() {
-
-                circles.forEach((circle, index) => {
-                    if (index <= currentStep) 
-                        circle.classList.add('active');
-                        
-                    else 
-                        circle.classList.remove('active');
-                        
-                });
-
-                lines.forEach((line, index) => {
-                    if (index < currentStep) 
-                        line.classList.add('active');
-                    else 
-                        line.classList.remove('active');
-                    
-                });
-
-                prevBtn.disabled = currentStep === 0;
-                nextBtn.disabled = currentStep === circles.length - 1;
-                
-                    if(currentStep == (circles.length - 1)) {
-                        sendBtn.style.display=' inline'
-                        nextBtn.style.display = 'none'; 
-                    }
-
-                    else {
-                            sendBtn.style.display = 'none'; 
-                            nextBtn.style.display = 'inline'; 
+                        if (currentStep > 0) {
+                            currentStep--;
+                            updateProgress();
                         }
-        }
+                        miFormulario.style.opacity=1
+                    }, 400)
 
-        prevBtn.addEventListener('click', () => {
-            miFormulario.style.opacity=0
-            setTimeout(function() {
-                    document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
-                    document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";              
+                
+            });
 
-                    if (currentStep > 0) {
-                        currentStep--;
+            nextBtn.addEventListener('click', () => {
+                miFormulario.style.opacity=0
+                setTimeout(function() {
+                    document.getElementById(`seccion${ (currentStep+1)}`).style.display = "none";
+                    document.getElementById(`seccion${(currentStep+1) + 1}`).style.display = "block";
+
+
+                    if (currentStep < circles.length - 1) {
+                        currentStep++;
                         updateProgress();
                     }
                     miFormulario.style.opacity=1
                 }, 400)
-
-            
-        });
-
-        nextBtn.addEventListener('click', () => {
-            miFormulario.style.opacity=0
-            setTimeout(function() {
-                document.getElementById(`seccion${ (currentStep+1)}`).style.display = "none";
-                document.getElementById(`seccion${(currentStep+1) + 1}`).style.display = "block";
-
-
-                if (currentStep < circles.length - 1) {
-                    currentStep++;
-                    updateProgress();
-                }
-                miFormulario.style.opacity=1
-            }, 400)
-        });
+            });
+        //Fin de la  interaccion del formulario para registrar un item
     </script>

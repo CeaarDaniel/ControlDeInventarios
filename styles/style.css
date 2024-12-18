@@ -20,7 +20,8 @@
   }
   
   .boton:focus {
-    box-shadow: 0 0 0 0.25rem #c4dde9;
+    box-shadow: 5px 5px 5px 1px #000000;
+    
   }
 
   .btnBuscar{
@@ -347,7 +348,7 @@
         margin-top: 5px;
         border-radius: 8px; /* Establece el borde inferior */
         font-family: 'Font Awesome 5 Free';
-
+        font-weight: 900;
       }
       
       .in:focus {

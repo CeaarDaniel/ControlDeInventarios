@@ -6,10 +6,13 @@
         style="background-color:#D8DCDC; max-width:400px;">
 
 
-        <div class="d-flex flex-column justify-content-center">
-            <img src="./img/Auto.png" alt="" style="max-width:300px">
-            <h5  class="p-2 text-center" style="max-width:300px"><b>CONTROL DE ALMACÉN DE REFACCIONES</b></h5>
+        <div class="d-flex justify-content-center"  style="width:100%">
+            <img src="./img/imagen.png" alt="" style="max-height:100px; width:100px;">
         </div>
+
+        <h5  class="p-2 text-center" style="width:100%">
+            <b>CONTROL DE ALMACÉN DE REFACCIONES</b>
+        </h5>
                 <button class="btn boton my-4 mx-1 px-1" onclick="navigation('buscarPieza','0')" style="width:100%">
                     BUSCAR MATERIAL
                 </button>

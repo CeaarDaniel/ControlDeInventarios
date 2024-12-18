@@ -56,7 +56,7 @@
                     </a>
                 </li>
                 <li class="nav-item w-100">
-                    <a href="#" class="nav-link pl-5 pt-3 pb-0 d-flex flex-column justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="SALIR" style="100%">
+                    <a href="../" class="nav-link pl-5 pt-3 pb-0 d-flex flex-column justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="SALIR" style="100%">
                         <i class="d-flex justify-content-center fas fa-times py-0 px-2 icono" style="font-size:25px"></i>
                         <p class="d-flex justify-content-center py-0 text-center textoMenu">SALIR</p>
                     </a>

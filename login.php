@@ -5,11 +5,14 @@
             style="background-color:#D8DCDC; max-width:400px;">
 
 
-                <div class="d-flex flex-column justify-content-center">
-                    <img src="./img/Auto.png" alt="" style="max-width:300px">
-                    <h4  class="p-2 text-center" style="max-width:300px"><b>CONTROL DE REGISTRO Y PRÉSTAMO DE AUTOS</b></h4>
+                <div class="d-flex justify-content-center" style="width:100%">
+
+                    <img src="./img/imagen.png" alt="" style="max-height:100px; width:100px;">
                 </div>
-                        
+
+                <div style="width:100%">   
+                    <h4  class="text-center" ><b>CONTROL DE ALMACÉN DE REFACCIONES</b></h4>
+                </div>
 
                 <div class="form-group p-1" style="width:100%">
                     <label class="mt-3"><b>NOMBRE DE USUARIO</b></label>
@@ -21,15 +24,15 @@
                     
                     <label class="mt-3"><b>CONTRASEÑA</b></label>
                     <div class="input-group">
-                        <input type="password" name="password" id="password" autocomplete="current-password" class="form-control mt-1" placeholder="CONTRASEÑA" required>
+                        <input type="password" name="" id="" autocomplete="current-password" class="form-control mt-1" placeholder="CONTRASEÑA" required>
                         <span class="input-group-text mt-1 p-0"><i id="btn-change" class="px-3 fa fa-eye fa-eye-slash"></i></span> 
                     </div>          
                 </div>
 
                     <div class="d-flex justify-content-center" style="width:100%;">
-                        <button class="btn boton mt-1" type="button" onclick="navigation('menuIndex',0)">
+                        <a href="./pages/dashboard.php" class="btn boton mt-1" type="button">
                                 ACCEDER
-                        </button>
+                        </a>
                     </div>
     </form>
 </div>
