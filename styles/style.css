@@ -510,4 +510,29 @@ canvas {
         color: white;
         border-color: black !important;
       }
+
+      .page-link{
+        color:#3e1e8d; 
+        background-color:#ECE6F0; 
+        border-color: 1px solid black;
+      }
+
+      .active>.page-link, .page-link.active {
+            color: #ffffff ;
+            background-color: #24003d ;
+            border-color: #000000;
+      }
 /*FIN ESTILOS DEL CATALOGO*/
+
+.carditem{
+  background: -webkit-linear-gradient(331deg, #000000,#000000,#380c50);    
+  border-radius: 20px;
+  background: linear-gradient(331deg, #000000,#000000,#380c50);
+}
+
+.carditemr{
+  background: #ece6f1;
+  border-radius: 20px;
+  color: black;
+  box-shadow: -2px 4px 3px 1px black;
+}

@@ -9,7 +9,6 @@
         <div class="modal-body">
             <!--Formulario para agregar un item -->
                 <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
-                    
                     <div class="seccion" id="seccion1">
                         <div class="row px-0 mx-0 my-1">
                             <div class="col-12 d-flex justify-content-center px-0">
@@ -163,7 +162,7 @@
                                 <label><b>TIEMPO DE ENTREGA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="">
+                                <input class="in" name="" id="" placeholder="&#xf073; Tiempo de entrega">
                             </div>
                         </div>
 
@@ -172,7 +171,7 @@
                                 <label><b>MARCA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="">
+                                <input class="in" name="" id="" placeholder="&#xf0a3 Marca">
                             </div>
                         </div>
 
@@ -181,7 +180,7 @@
                                 <label><b>PROVEEDOR</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="">
+                                <input class="in" name="" id="" placeholder="&#xf2b5 Proveedor">
                             </div>
                         </div>
 
@@ -190,7 +189,7 @@
                                 <label><b>TIPO DE REFACCION</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="">
+                                <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion">
                             </div>
                         </div>
                     </div>
@@ -203,7 +202,7 @@
                     <button class="btn boton mx-1" id="nextBtn"><span>SIGUIENTE</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
                     <button class="btn boton mx-1" id="sendBtn" style="display: none;">REGISTRAR<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
                 </div>
-                <div class="d-flex justify-content-center px-sm-0 px-md-5" style="width:100%">
+                <div class="d-flex justify-content-center px-sm-0 px-md-5 circleAgregar" style="width:100%">
                     <div class="progress-container" style="width: 100%;">
                         <div class="circle active my-3">1</div>
                         <div class="line"></div>
@@ -230,14 +229,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
-                        <div class="seccion" id="seccion1">
+                    <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="formularioEditar" style="height: 100%; width:100%;">
+                        <div class="" id="">
                             <div class="row px-0 mx-0 my-1">
                                 <div class="col-12 d-flex justify-content-center px-0">
                                     <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
-                                    <select class="in py-1" name="categoriaPieza" id="categoriaPieza">
+                                    <select class="in py-1" name="categoriaPiezafe" id="categoriaPiezafe">
                                         <option value="" selected>&#xf002; --- CATEGORÍA---</option>
                                         <option value="1">HOLDERS</option>
                                         <option value="2">HERRAMIENTAS</option>
@@ -253,7 +252,7 @@
                                     <label><b>Nombre</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="nombre" id="nombre">
+                                    <input class="in" name="nombrefe" id="nombrefe">
                                 </div>
                             </div>
 
@@ -290,19 +289,19 @@
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                         <div>
-                                            <input class="radio" type="radio" name="filtroSQ" id="filtroSQ1" value="S" checked>
+                                            <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ1fe" value="S" checked>
                                             <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
                                         </div>
                                     
                                         <div>
-                                            <input class="radio" type="radio" name="filtroSQ" id="filtroSQ2" value="N">
+                                            <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ2fe" value="N">
                                             <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
                                         </div>
                                 </div>
                             </div>
                         </div>
                     
-                        <div class="seccion" id="seccion2" style="display:none;">
+                        <div class="" id="" style="display:none;">
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>INCERTO</b></label>
@@ -340,7 +339,7 @@
                             </div>
                         </div>
                     
-                        <div class="seccion" id="seccion3" style="display:none;">
+                        <div class="" id="" style="display:none;">
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>MINIMO</b></label>
@@ -373,12 +372,12 @@
                                     <label><b>PUNTOS DE REORDEN</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
+                                    <input class="in" name="tiempoEntregafe" id="tiempoEntregafe" placeholder="Tiempo de entrega">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="seccion" id="seccion4" style="display:none;">
+                        <div class="" id="" style="display:none;">
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>TIEMPO DE ENTREGA</b></label>
@@ -419,13 +418,13 @@
                 </div>
                 <div class="modal-footer py-1" style="border: 0px solid white;">
                         <div class="d-flex justify-content-center" style="width:100%"> 
-                            <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>ANTERIOR</span></button>
-                            <button class="btn boton mx-1" id="nextBtn"><span>SIGUIENTE</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
-                            <button class="btn boton mx-1" id="sendBtn" style="display: none;">REGISTRAR<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
+                            <button class="btn boton mx-1" id="prevBtnfe" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>ANTERIOR</span></button>
+                            <button class="btn boton mx-1" id="nextBtnfe"><span>SIGUIENTE</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
+                            <button class="btn boton mx-1" id="sendBtnfe" style="display: none;">REGISTRAR<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
                         </div>
-                        <div class="d-flex justify-content-center px-sm-0 px-md-5" style="width:100%">
+                        <div id="" class="d-flex justify-content-center px-sm-0 px-md-5 circleEditar" style="width:100%">
                             <div class="progress-container" style="width: 100%;">
-                                <div class="circle active my-3">1</div>
+                                <div class="circle acive my-3">1</div>
                                 <div class="line"></div>
                                 <div class="circle">2</div>
                                 <div class="line"></div>
@@ -462,8 +461,8 @@
 
 
     <!--Contenedor de los items -->
-        <div class="py-3 px-3 px-md-0 mx-sm-0 mx-lg-1 mx-xl-5 my-3 rounded" style="background-color:#e0e0e080">
-            <input id="agencia" name="agencia" type="text" class="in icon-input my-3 mx-4" placeholder="Nombre de la pieza" style="width:auto">
+        <div class=" py-3 px-3 px-md-0 mx-sm-0 mx-lg-1 mx-xl-5 my-3 rounded" style="background-color:#FFF">
+            <input id="" name="" type="text" class="in icon-input my-3 mx-4" placeholder="&#xf02d; Nombre de la pieza" style="width:auto">
 
             <!--Listado de los items -->
                 <div id="itemContainer" class="row mx-md-0 mx-lg-5"></div>
@@ -521,7 +520,7 @@
                         paginatedItems.forEach(item => {
                             const div = document.createElement('div');
                             div.className = 'col-12 col-md-6 col-lg-4 mb-4';
-                            div.innerHTML = `<div class="border border-1 border-dark">
+                            div.innerHTML = `<div class="carditemr border border-1 border-dark">
                                                 <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
                                                     <p class="py-0 my-0"> <b>${item} </b></p>
                                                     <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
@@ -531,7 +530,7 @@
                                                 </div>
 
                                                 <div class="d-flex justify-content-between px-2" style="width:100%" >
-                                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
+                                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
                                                 </div>
 
                                                 <div class="d-flex justify-content-start px-2 py-2">
@@ -557,7 +556,7 @@
                     for (let page = 1; page <= totalPages; page++) {
                         const li = document.createElement('li');
                         li.className = `page-item ${page === currentPage ? 'active' : ''}`;
-                        li.innerHTML = `<a class='page-link' href='#'>${page}</a>`;
+                        li.innerHTML = `<a class='page-link' href='#' >${page}</a>`;
                         li.addEventListener('click', (e) => {
                             e.preventDefault();
                             currentPage = page;
@@ -573,8 +572,8 @@
 
         
         // Interaccion del formulario para registrar un item
-            const circles = document.querySelectorAll('.circle');
-            const lines = document.querySelectorAll('.line');
+            const circles = document.querySelectorAll('div.circleAgregar .circle');
+            const lines = document.querySelectorAll('div.circleAgregar .line');
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
             const sendBtn = document.getElementById('sendBtn');
