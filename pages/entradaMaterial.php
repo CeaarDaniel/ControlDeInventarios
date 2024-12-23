@@ -74,38 +74,38 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">CANTIDAD</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf0dc; Cantidad">
                                 </div> 
                             </div>
 
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">COSTO EN DOLARES</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf155; Costo en dolares">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">COSTO TOTAL</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf0d6; Costo total">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">VALOR DE CAMBIO</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf1ac; Valor de cambio">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">FECHA DE COMPRA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf073; Fecha de compra">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">COSTO EN PESOS</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Costo en pesos">
                                 </div> 
                             </div>
 
@@ -113,31 +113,31 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">NUMERO DE NOMINA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="nomina" name="nomina" type="text" placeholder="&#xf2b9; Número de nomina">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DE QUIEN RECIBIO</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre del que recibe">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN">FECHA DE REGISTRO DE LA COMPRA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf272; Fecha de registro de la compra">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN">NOMBRE DE QUIEN REGISTRO LA COMPRA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre de quien registro la compra">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN">USUARIO QUE REGISTRO LA COMPRA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf007; Usuario que registra la compra">
                                 </div> 
                             </div>
                         </div>

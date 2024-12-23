@@ -28,35 +28,28 @@
         <div class="col-12 col-sm">
             <div class="d-flex flex-column flex-wrap">
                 <label class="fw-bold px-1" for="NN" style="max-width:240px;">ID</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; ingrese algun valor">
+                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf084; Ingrese algun valor">
             </div> 
         </div>
 
         <div class="col-12 col-sm">
             <div class="d-flex flex-column flex-wrap">
                 <label class="fw-bold px-1" for="NN" style="max-width:240px;">Fecha de solicitud</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="date" placeholder="&#xf02d;">
+                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="date">
             </div> 
         </div>
 
         <div class="col-12 col-sm">
             <div class="d-flex flex-column flex-wrap">
                 <label class="fw-bold px-1" for="NN" style="max-width:240px;">Nombre de quien regresa</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; ingrese algun valor">
+                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
             </div> 
         </div>
 
         <div class="col-12 col-sm">
             <div class="d-flex flex-column flex-wrap">
                 <label class="fw-bold px-1" for="NN" style="max-width:240px;">Material devuelto</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; ingrese algun valor">
-            </div> 
-        </div> 
-
-        <div class="col-12 col-sm">
-            <div class="d-flex flex-column flex-wrap">
-                <label class="fw-bold px-1" for="NN" style="max-width:240px;">Material devuelto</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; ingrese algun valor">
+                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf04a; ingrese algun valor">
             </div> 
         </div> 
     </div>

@@ -10,7 +10,7 @@
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">TIPO DE PIEZA</label>
                                     <select class="in me-sm-5 icon-input" name="CODIGO_SHOP" id="CODIGO_SHOP" required>
-                                        <option value="" selected="selected">&#xf02a; ---Código shop---</option>
+                                        <option value="" selected="selected">&#xf02c; ---CATEGORIA---</option>
                                         <option value="">HOLDERS</option>
                                         <option value="">HERRAMIENTAS</option>
                                         <option value="">REFACCIONES</option>
@@ -20,16 +20,12 @@
                                     </select>
                                 </div>
                             </div>
+                            
+
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">Ubicacion de la pieza</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
-                                </div> 
-                            </div>
-                            <div class="col-12 col-md-6 my-2 px-0">
-                                <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold" for="NN" style="max-width:240px;">Codigo del producto</label>  
-                                    <input class="in me-sm-5 icon-input" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="&#xf029; Departamento">
+                                    <label class="fw-bold" for="NN" style="max-width:240px;">Codigo de la pieza</label>  
+                                    <input class="in me-sm-5 icon-input" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="&#xf02a; Codigo de la pieza">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
@@ -38,35 +34,58 @@
                                     <input class="in me-sm-5 icon-input" id="NN" name="NN" type="number"  min=2 placeholder="&#xf2b9; Escriba su número de nómina" required>
                                 </div>
                             </div>
+                            
+                            <div class="col-12 col-md-6 my-2 px-0">
+                                <div class="d-flex flex-column flex-wrap">
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">LINEA</label>  
+                                    <input class="in me-sm-5 icon-input" type="text" name="proceso" id="proceso" placeholder="&#xf238; Linea" readonly>
+                                </div> 
+                            </div>
+
+                            <div class="col-12 col-md-6 my-2 px-0">
+                                <div class="d-flex flex-column flex-wrap">
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">PROCESO</label>  
+                                    <input class="in me-sm-5 icon-input" type="text" name="proceso" id="proceso" placeholder="&#xf162; Proceso" readonly>
+                                </div> 
+                            </div>
+
+                            <div class="col-12 col-md-6 my-2 px-0">
+                                <div class="d-flex flex-column flex-wrap">
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">RACK</label>  
+                                    <input class="in me-sm-5 icon-input" type="text" name="rack" id="rack" placeholder="&#xf233; Rack" readonly>
+                                </div> 
+                            </div>
+
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <img src="../img/imagen.png" alt="" style="width: auto; max-height:100px">
                             </div>
-                           
+
+
                             <h5 class="my-3">DETALLES DE SALIDA</h5>
 
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">CANTIDAD</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf0dc; Cantidad">
                                 </div> 
                             </div>
 
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">C/U</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf155; Costo unitario">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">COSTO TOTAL</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf0d6; Total">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">FECHA DE COMPRA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf073; Fecha de compra">
                                 </div> 
                             </div>
 
@@ -74,19 +93,19 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">NUMERO DE NOMINA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf2b9; Número de nomina">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DEL SOLICITANTE</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf007; Solicitante">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN">LINEA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="Linea">
                                 </div> 
                             </div>
                         </div>
