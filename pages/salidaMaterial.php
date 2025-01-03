@@ -1,6 +1,6 @@
 <?php //date_default_timezone_set('Etc/GMT+6');?>
         <div class="d-flex aling-content-center justify-content-center" id="formulario" name="formulario">
-            <!--Formulario de llenado-->
+            <!--Formulario para el registro de salida de material-->
                 <form id="formulario-llenado" class="form-control px-5 mb-3 border border-secondary border-2 rounded" style="max-width:90%;">
                         <h4 class="text-center">SALIDA DE MATERIAL</h4>
                         <h5>INFORMACION DEL PRODUCTO</h5>
@@ -24,13 +24,13 @@
 
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold" for="NN" style="max-width:240px;">Codigo de la pieza</label>  
+                                    <label class="fw-bold" for="NN" style="max-width:240px;">CÓDIGO DE LA PIEZA</label>  
                                     <input class="in me-sm-5 icon-input" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="&#xf02a; Codigo de la pieza">
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold" style="max-width:240px;">Nombre de la pieza</label>
+                                    <label class="fw-bold" style="max-width:240px;">NOMBRE DE LA PIEZA </label>
                                     <input class="in me-sm-5 icon-input" id="NN" name="NN" type="number"  min=2 placeholder="&#xf2b9; Escriba su número de nómina" required>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                             <h4 class="my-3">INFORMACION DEL SOLICITANTE</h4>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NUMERO DE NOMINA</label>  
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NÚMERO DE NÓMINA</label>  
                                     <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf2b9; Número de nomina">
                                 </div> 
                             </div>
@@ -105,12 +105,12 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN">LINEA</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="Linea">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf275; Linea">
                                 </div> 
                             </div>
                         </div>
                 </form>
-            <!--Formulario de llenado-->
+            <!--Fin Formulario para el registro de salida de material-->
         </div>
 
     <!--Boton de regreso -->

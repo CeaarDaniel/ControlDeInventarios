@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <div class="modal-body">
-            <!--Formulario para agregar un item -->
+            <!--Formulario paginado para agregar un item -->
                 <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
                     <div class="seccion" id="seccion1">
                         <div class="row px-0 mx-0 my-1">
@@ -16,19 +16,19 @@
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <select class="in mt-3" name="categoriaPieza" id="categoriaPieza">
-                                    <option value="" selected>--- CATEGORÍA  ---</option>
-                                    <option value="1">CATEGORIA 1</option>
-                                    <option value="2">CATEGORIA 2</option>
-                                    <option value="3">CATEGORIA 3</option>
-                                    <option value="4">CATEGORIA 4</option>
-                                    <option value="5">CATEGORIA 5</option>
+                                <option value="" selected>&#xf002; --- CATEGORÍA---</option>
+                                        <option value="1">HOLDERS</option>
+                                        <option value="2">HERRAMIENTAS</option>
+                                        <option value="3">REFACCIONES</option>
+                                        <option value="4">TORNILLOS</option>
+                                        <option value="5">CONSUMIBLES</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>Nombre</b></label>
+                                <label><b>NOMBRE</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="nombrePieza" id="nombrePieza" placeholder="&#xf02d; Nombre">
@@ -37,7 +37,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>Costo</b></label>
+                                <label><b>COSTO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="costoPieza" id="costoPieza" placeholder="&#xf155; Costo">
@@ -46,7 +46,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>Codigo</b></label>
+                                <label><b>CÓDIGO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="codigoPieza" id="codigoPieza" placeholder="&#xf02a codigo">
@@ -55,7 +55,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>Stock inicial</b></label>
+                                <label><b>STOCK INICIAL</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="stock" id="stock" placeholder="&#xf01c; stock">
@@ -64,7 +64,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>Inventariable</b></label>
+                            <label><b>INVENTARIABLE</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                     <div>
@@ -104,7 +104,7 @@
                                 <label><b>LINEA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="linea" id="linea" placeholder="&#xf238; Linea">
+                                <input class="in" name="linea" id="linea" placeholder="&#xf275; Linea">
                             </div>
                         </div>
 
@@ -121,7 +121,7 @@
                     <div class="seccion" id="seccion3" style="display:none;">
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>MINIMO</b></label>
+                                <label><b>MÍNIMO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="minimo" id="minimo" placeholder="&#xf063; Minimo">
@@ -130,7 +130,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>MAXIMO</b></label>
+                                <label><b>MÁXIMO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="maximo" id="maximo" placeholder="&#xf062; Maximo">
@@ -186,7 +186,7 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>TIPO DE REFACCION</b></label>
+                                <label><b>TIPO DE REFACCIÓN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion">
@@ -194,14 +194,21 @@
                         </div>
                     </div>
                 </form>
-            <!--Fin del formulario para agregar un item -->
+            <!--Fin del formulario paginado para agregar un item -->
         </div>
-        <div class="modal-footer py-1" style="border: 0px solid white;">
+
+        <!--Pie del modal -->
+            <div class="modal-footer py-1" style="border: 0px solid white;">
+
+                <!--Botones adelante atras -->
                 <div class="d-flex justify-content-center" style="width:100%"> 
-                    <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>ANTERIOR</span></button>
-                    <button class="btn boton mx-1" id="nextBtn"><span>SIGUIENTE</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
-                    <button class="btn boton mx-1" id="sendBtn" style="display: none;">REGISTRAR<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
+                    <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>Anterior</span></button>
+                    <button class="btn boton mx-1" id="nextBtn"><span>Siguiente</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
+                    <button class="btn boton mx-1" id="sendBtn" style="display: none;">Registrar<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
                 </div>
+                <!--Fin Botones adelante atras -->
+
+                <!--Lineas y circulos de progreso -->
                 <div class="d-flex justify-content-center px-sm-0 px-md-5 circleAgregar" style="width:100%">
                     <div class="progress-container" style="width: 100%;">
                         <div class="circle active my-3">1</div>
@@ -213,7 +220,9 @@
                         <div class="circle">4</div>
                     </div>
                 </div>
-        </div>
+                <!--Fin Lineas y circulos de progreso -->
+            </div>
+        <!--Fin pie del modal -->
     </div>
   </div> 
 </div>
@@ -249,7 +258,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>Nombre</b></label>
+                                    <label><b>NOMBRE</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="nombrefe" id="nombrefe">
@@ -258,7 +267,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>Costo</b></label>
+                                    <label><b>COSTO</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -267,7 +276,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>Codigo</b></label>
+                                    <label><b>CÓDIGO</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -276,7 +285,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>Stock inicial</b></label>
+                                    <label><b>STOCK INICIAL</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -285,7 +294,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>Inventariable</b></label>
+                                <label><b>INVENTARIABLE</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                         <div>
@@ -342,7 +351,7 @@
                         <div class="" id="" style="display:none;">
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>MINIMO</b></label>
+                                    <label><b>MÍNIMO</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -351,7 +360,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>MAXIMO</b></label>
+                                    <label><b>MÁXIMO</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -407,7 +416,7 @@
 
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>TIPO DE REFACCION</b></label>
+                                    <label><b>TIPO DE REFACCIÓN</b></label>
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
                                     <input class="in" name="" id="">
@@ -416,24 +425,32 @@
                         </div>
                     </form>
                 </div>
+
+                <!--Pie del modal -->
                 <div class="modal-footer py-1" style="border: 0px solid white;">
-                        <div class="d-flex justify-content-center" style="width:100%"> 
-                            <button class="btn boton mx-1" id="prevBtnfe" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>ANTERIOR</span></button>
-                            <button class="btn boton mx-1" id="nextBtnfe"><span>SIGUIENTE</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
-                            <button class="btn boton mx-1" id="sendBtnfe" style="display: none;">REGISTRAR<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
-                        </div>
-                        <div id="" class="d-flex justify-content-center px-sm-0 px-md-5 circleEditar" style="width:100%">
-                            <div class="progress-container" style="width: 100%;">
-                                <div class="circle acive my-3">1</div>
-                                <div class="line"></div>
-                                <div class="circle">2</div>
-                                <div class="line"></div>
-                                <div class="circle">3</div>
-                                <div class="line"></div>
-                                <div class="circle">4</div>
+                        <!--Botones adelante atras -->
+                            <div class="d-flex justify-content-center" style="width:100%"> 
+                                <button class="btn boton mx-1" id="prevBtnfe" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>Anterior</span></button>
+                                <button class="btn boton mx-1" id="nextBtnfe"><span>Siguiente</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
+                                <button class="btn boton mx-1" id="sendBtnfe" style="display: none;">Registrar<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
                             </div>
-                        </div>
+                        <!--Fin Botones adelante atras -->
+
+                        <!--Lineas y circulos de progreso -->
+                            <div id="" class="d-flex justify-content-center px-sm-0 px-md-5 circleEditar" style="width:100%">
+                                <div class="progress-container" style="width: 100%;">
+                                    <div class="circle acive my-3">1</div>
+                                    <div class="line"></div>
+                                    <div class="circle">2</div>
+                                    <div class="line"></div>
+                                    <div class="circle">3</div>
+                                    <div class="line"></div>
+                                    <div class="circle">4</div>
+                                </div>
+                            </div>
+                        <!--Fin Lineas y circulos de progreso -->
                 </div>
+                <!--Fin pie de modal -->
             </div>
         </div> 
     </div>

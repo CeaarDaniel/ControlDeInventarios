@@ -24,41 +24,44 @@
         SOLICITUDES DE REGRESO DE MATERIAL
     </h3>
 
-    <div class="row mx-1">
-        <div class="col-12 col-sm">
-            <div class="d-flex flex-column flex-wrap">
-                <label class="fw-bold px-1" for="NN" style="max-width:240px;">ID</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf084; Ingrese algun valor">
+    <!--Filtros de busqueda para las solicitudes de regreso de material -->
+        <div class="row mx-1">
+            <div class="col-12 col-sm">
+                <div class="d-flex flex-column flex-wrap">
+                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">ID</label>  
+                    <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf084; Ingrese algun valor">
+                </div> 
+            </div>
+
+            <div class="col-12 col-sm">
+                <div class="d-flex flex-column flex-wrap">
+                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">FECHA DE SOLICITUD</label>  
+                    <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="date">
+                </div> 
+            </div>
+
+            <div class="col-12 col-sm">
+                <div class="d-flex flex-column flex-wrap">
+                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DE QUIEN REGRESA</label>  
+                    <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
+                </div> 
+            </div>
+
+            <div class="col-12 col-sm">
+                <div class="d-flex flex-column flex-wrap">
+                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">MATERIAL DEVUELTO</label>  
+                    <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf04a; ingrese algun valor">
+                </div> 
             </div> 
         </div>
+    <!--Fin de Filtros de busqueda para las solicitudes de regreso de material -->
 
-        <div class="col-12 col-sm">
-            <div class="d-flex flex-column flex-wrap">
-                <label class="fw-bold px-1" for="NN" style="max-width:240px;">Fecha de solicitud</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="date">
-            </div> 
-        </div>
-
-        <div class="col-12 col-sm">
-            <div class="d-flex flex-column flex-wrap">
-                <label class="fw-bold px-1" for="NN" style="max-width:240px;">Nombre de quien regresa</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
-            </div> 
-        </div>
-
-        <div class="col-12 col-sm">
-            <div class="d-flex flex-column flex-wrap">
-                <label class="fw-bold px-1" for="NN" style="max-width:240px;">Material devuelto</label>  
-                <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf04a; ingrese algun valor">
-            </div> 
-        </div> 
-    </div>
 
     <div class="d-flex justify-content-center mt-3" style="width:100%">
         <button class="btn btnBuscar" type="button"><i class="fas fa-search mx-1 py-1" style="font-size:20px;"></i> Buscar</button>
     </div>
 
-        <!-- -->
+    <!--Lista de solicitudes de regresos de material-->
         <hr>
 
        <!-- <div class="d-flex mx-5 my-1" style="background-color:#D9D9D9; border-bottom: 2px #ccc; border-right: 2px #ccc; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); border-radius:10px"> -->
@@ -178,6 +181,7 @@
                     <button class="btn boton mb-3" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">Autorizar</button>
                 </div>
             </div>
+    <!--Fin Lista de solicitudes de regresos de material-->
 
 
 <!--        </div> -->

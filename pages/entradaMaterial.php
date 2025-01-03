@@ -7,7 +7,7 @@
 
                     <h4 class="text-center">ENTRADA DE MATERIAL</h4>
 
-                        <h5>INFORMACION DEL PRODUCTO</h5>
+                        <h5>INFORMACIÓN DE LA PIEZA</h5>
 
                         <div class="row m-0 px-0">
                             <div class="col-12 col-md-6 my-2 px-0">
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold" for="NN" style="max-width:240px;">CODIGO DEL ITEM</label>  
+                                    <label class="fw-bold" for="NN" style="max-width:240px;">CÓDIGO DE LA PIEZA</label>  
                                     <input class="in me-sm-5 icon-input" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="&#xf02a; codigo">
                                 </div>
                             </div>
@@ -44,14 +44,14 @@
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">PROOVEDOR</label>  
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">PROVEEDOR</label>  
                                     <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf2b5; Proveedor">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">LINEA</label>  
-                                    <input class="in me-sm-5 icon-input" type="text" name="proceso" id="proceso" placeholder="&#xf238; Linea" readonly>
+                                    <input class="in me-sm-5 icon-input" type="text" name="proceso" id="proceso" placeholder="&#xf275; Linea" readonly>
                                 </div> 
                             </div>
 
@@ -105,20 +105,20 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold px-1" for="NN" style="max-width:240px;">COSTO EN PESOS</label>  
-                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Costo en pesos">
+                                    <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf155; Costo en pesos">
                                 </div> 
                             </div>
 
-                            <h4 class="my-3">INFORMACION DE QUIEN RECIBE</h4>
+                            <h4 class="my-3">INFORMACIÓN DE QUIEN RECIBE</h4>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NUMERO DE NOMINA</label>  
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NÚMERO DE NÓMINA</label>  
                                     <input class="in me-sm-5 icon-input" id="nomina" name="nomina" type="text" placeholder="&#xf2b9; Número de nomina">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DE QUIEN RECIBIO</label>  
+                                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DE QUIEN RECIBIÓ</label>  
                                     <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre del que recibe">
                                 </div> 
                             </div>
@@ -130,13 +130,13 @@
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN">NOMBRE DE QUIEN REGISTRO LA COMPRA</label>  
+                                    <label class="fw-bold px-1" for="NN">NOMBRE DE QUIEN REGISTRÓ LA COMPRA</label>  
                                     <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre de quien registro la compra">
                                 </div> 
                             </div>
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
-                                    <label class="fw-bold px-1" for="NN">USUARIO QUE REGISTRO LA COMPRA</label>  
+                                    <label class="fw-bold px-1" for="NN">USUARIO QUE REGISTRÓ LA COMPRA</label>  
                                     <input class="in me-sm-5 icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf007; Usuario que registra la compra">
                                 </div> 
                             </div>

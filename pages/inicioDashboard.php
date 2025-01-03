@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-fullscreen modal-xl modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title d-flex justify-content-center text-center" style="width:100%"><b> BUSCAR UBICACION DE PIEZA </b></h5>
+        <h5 class="modal-title d-flex justify-content-center text-center" style="width:100%"><b> BUSCAR UBICACIÓN DE PIEZA </b></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
         <div class="modal-body">
@@ -442,7 +442,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center px-2 py-0 my-0">
-                        <p class="py-0 my-0">HOLDERS</p>
+                        <p class="py-0 my-0"><b> HOLDERS </b></p>
                     </div>
                     
                 </div>
@@ -460,7 +460,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center px-2 py-0 my-0">
-                        <p class="py-0 my-0">REFACCIONES</p>
+                        <p class="py-0 my-0"><b>REFACCIONES </b></p>
                     </div>
                     
                 </div>
@@ -478,7 +478,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center px-2 py-0 my-0">
-                        <p class="py-0 my-0">HERRAMIENTAS</p>
+                        <p class="py-0 my-0"><b>HERRAMIENTAS</b></p>
                     </div>
                     
                 </div>
@@ -496,9 +496,8 @@
                     </div>
 
                     <div class="d-flex justify-content-center px-2 py-0 my-0">
-                        <p class="py-0 my-0">ALMACEN</p>
+                        <p class="py-0 my-0"><b>ALMACEN</b></p>
                     </div>
-                    
                 </div>
             </div>
         </div>

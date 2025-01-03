@@ -9,12 +9,12 @@
                 <div class="col-12 col-sm-6">
                     <label for=""><b>CATEGORÍA DE LA PIEZA </b></label> <br>
                     <select class="in mt-3" name="categoriaPieza" id="categoriaPieza">
-                        <option value="" selected>&#xf02c; --- CATEGORÍA  ---</option>
-                        <option value="1">CATEGORIA 1</option>
-                        <option value="2">CATEGORIA 2</option>
-                        <option value="3">CATEGORIA 3</option>
-                        <option value="4">CATEGORIA 4</option>
-                        <option value="5">CATEGORIA 5</option>
+                        <option value="" selected>&#xf002; --- CATEGORÍA---</option>
+                        <option value="1">HOLDERS</option>
+                        <option value="2">HERRAMIENTAS</option>
+                        <option value="3">REFACCIONES</option>
+                        <option value="4">TORNILLOS</option>
+                        <option value="5">CONSUMIBLES</option>
                     </select>
                 </div>
                 <div class="col-12 col-sm-6 my-1">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>LINEA</b></label><br>
-                    <input id="linea" name="linea" type="text" class="in icon-input" placeholder="&#xf238; Linea" maxlength="">
+                    <input id="linea" name="linea" type="text" class="in icon-input" placeholder="&#xf275; Linea" maxlength="">
                 </div>
                 <div class="col-12 col-sm-6 my-1">
                     <label for="text"><b>PROCESO</b></label><br>

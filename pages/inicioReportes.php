@@ -41,7 +41,7 @@
                     <div class="px-2 text-center justify-content-center" style="width: 18rem;">
                         <div class="menuOption pt-3 pb-4 px-0 card-body border border-2 border-secondary px-0 rounded shadow">
                             <img src="../img/gear.png" style="width: 100px; height:100px">
-                            <p class="py-0 my-0">HOLDERS</p>
+                            <p class="py-0 my-0"><b> HOLDERS </b></p>
                         </div>
                     </div>
                 </a>  
@@ -54,7 +54,7 @@
                     <div class="px-2 text-center justify-content-center" style="width: 18rem;">
                         <div class="menuOption pt-3 pb-4 px-0 card-body border border-2 border-secondary px-0 rounded shadow">
                             <img src="../img/refacciones.png" style="width: auto; max-height:100px;">
-                            <p class="py-0 my-0">REFACCIONES</p>
+                            <p class="py-0 my-0"><b> REFACCIONES </b></p>
                         </div>
                     </div>
                 </a>  
@@ -67,7 +67,7 @@
                     <div class="px-2 text-center justify-content-center" style="width: 18rem;">
                         <div class="menuOption pt-3 pb-4 px-0 card-body border border-2 border-secondary px-0 rounded shadow">
                             <img src="../img/tools.png" style="width: auto; max-height:100px">
-                            <p class="py-0 my-0">HERRAMIENTAS</p>
+                            <p class="py-0 my-0"><b> HERRAMIENTAS </b></p>
                         </div>
                     </div>
                 </a>  
@@ -80,7 +80,7 @@
                     <div class="px-2 text-center justify-content-center" style="width: 18rem;">
                         <div class="menuOption pt-3 pb-4 px-0 card-body border border-2 border-secondary px-0 rounded shadow">
                             <img src="../img/almacen.png" style="width: auto; max-height:100px">
-                            <p class="py-0 my-0">ALMACEN</p>
+                            <p class="py-0 my-0"><b> ALMACEN </b></p>
                         </div>
                     </div>
                 </a>  
