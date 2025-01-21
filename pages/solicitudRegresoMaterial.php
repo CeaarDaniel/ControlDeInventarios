@@ -7,22 +7,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                            <p class="fs-5 text-center">
-                                ¿ESTA SEGURO QUE DESEA AUTORIZAR ESTE REGREGRESO DE MATERIAL?
-                            </p>
-                            <div class="d-flex justify-content-center" style="width:100%">
-                                <button class="btn boton">Autorizar</button>
-                            </div>
+                        <p class="fs-5 text-center">
+                            ¿ESTA SEGURO QUE DESEA AUTORIZAR ESTE REGREGRESO DE MATERIAL?
+                        </p>
+                        <div class="d-flex justify-content-center" style="width:100%">
+                            <button class="btn boton">Autorizar</button>
+                        </div>
                 </div>
             </div>
         </div> 
     </div>
 <!--Fin modal autorizar regreso de material -->
-
-
-    <h3 class="text-center">
-        SOLICITUDES DE REGRESO DE MATERIAL
-    </h3>
 
     <!--Filtros de busqueda para las solicitudes de regreso de material -->
         <div class="row mx-1">
@@ -42,7 +37,7 @@
 
             <div class="col-12 col-sm">
                 <div class="d-flex flex-column flex-wrap">
-                    <label class="fw-bold px-1" for="NN" style="max-width:240px;">NOMBRE DE QUIEN REGRESA</label>  
+                    <label class="fw-bold px-1" for="NN" style="max-width:270px;">NOMBRE DE QUIEN REGRESA</label>  
                     <input class="in icon-input" id="NOMBRE" name="NOMBRE" type="text" placeholder="&#xf02d; Nombre">
                 </div> 
             </div>

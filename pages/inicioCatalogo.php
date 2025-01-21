@@ -1,3 +1,17 @@
+<?php date_default_timezone_set('Etc/GMT+6');
+include('../api/conexion.php');
+
+
+$sn = "select idCategoria, nombreCategoria from SCI_categoria"; 
+$consulta = $conn->prepare($sn);
+$consulta->execute();
+$respuesta = array();
+
+
+     while($res = $consulta->fetch(PDO::FETCH_ASSOC))
+           $respuesta[] = $res;
+?>
+
 <!-- Modal de agregar pieza -->
 <div class="modal fade" id="modalAgregarPieza" tabindex="-1" aria-labelledby="modalAgregarPieza" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -15,81 +29,98 @@
                                 <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <select class="in mt-3" name="categoriaPieza" id="categoriaPieza">
-                                <option value="" selected>&#xf002; --- CATEGORÍA---</option>
-                                        <option value="1">HOLDERS</option>
-                                        <option value="2">HERRAMIENTAS</option>
-                                        <option value="3">REFACCIONES</option>
-                                        <option value="4">TORNILLOS</option>
-                                        <option value="5">CONSUMIBLES</option>
+                                <select class="in mt-3" name="nombreCategoria" id="nombreCategoria">
+                                    <option value="" selected>&#xf002; --- CATEGORÍA---</option>
+                                        <?php
+                                            foreach($respuesta as $res)
+                                                echo '<option value="'.$res['idCategoria'].'">'.$res['nombreCategoria'].' </option>';
+                                        ?>
                                 </select>
                             </div>
                         </div>
 
+
+                        <!--CODIGO DEL ITEM -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>NOMBRE</b></label>
+                                <label><b>CODIGO DEL ITEM</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="idItem" id="idItem" placeholder="&#xf02a; Codigo item">
+                            </div>
+                        </div>
+                        
+
+                        <!--NOMBRE/MODELO-->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>NOMBRE Y/O MODELO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="nombrePieza" id="nombrePieza" placeholder="&#xf02d; Nombre">
                             </div>
                         </div>
 
+                        <!-- DESCRIPCION -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>COSTO</b></label>
+                                        <!--  <label><b>TIPO DE REFACCIÓN</b></label> -->
+                                        <label><b>DESCRIPCION</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="costoPieza" id="costoPieza" placeholder="&#xf155; Costo">
+                                <textarea class="in" name="" id="" rows=3 placeholder="&#xf085 Descripcion" style="max-height:100px"></textarea>
+                                <!-- <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion"> -->
                             </div>
                         </div>
 
+                        <!--IMAGEN-->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>CÓDIGO</b></label>
+                                <label><b>IMAGEN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="codigoPieza" id="codigoPieza" placeholder="&#xf02a codigo">
+                                <input type="file" class="in" name="" id="" placeholder=" Nombre">
                             </div>
                         </div>
 
-                        <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>STOCK INICIAL</b></label>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="stock" id="stock" placeholder="&#xf01c; stock">
-                            </div>
-                        </div>
 
-                        <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                            <label><b>INVENTARIABLE</b></label>
+
+                        <!--INVENTARIABLE -->
+                         <!--
+                            <div class="row px-0 mx-0 my-3">
+                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>INVENTARIABLE</b></label>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                        <div>
+                                            <input class="radio" type="radio" name="filtroSQ" id="filtroSQ1" value="S" checked>
+                                            <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
+                                        </div>
+                                    
+                                        <div>
+                                            <input class="radio" type="radio" name="filtroSQ" id="filtroSQ2" value="N">
+                                            <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
+                                        </div>
+                                </div>
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                    <div>
-                                        <input class="radio" type="radio" name="filtroSQ" id="filtroSQ1" value="S" checked>
-                                        <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
-                                    </div>
-                                
-                                    <div>
-                                        <input class="radio" type="radio" name="filtroSQ" id="filtroSQ2" value="N">
-                                        <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
-                                    </div>
-                            </div>
-                        </div>
+                          -->
                     </div>
                 
                     <div class="seccion" id="seccion2" style="display:none;">
-                        <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>INCERTO</b></label>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="incerto" id="incerto" placeholder="&#xf0d0; Incerto">
-                            </div>
-                        </div>
 
+                        <!--INCERTO -->
+                        <!--
+                            <div class="row px-0 mx-0 my-3">
+                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                    <label><b>INCERTO</b></label>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <input class="in" name="incerto" id="incerto" placeholder="&#xf0d0; Incerto">
+                                </div>
+                            </div>
+                        -->
+
+                        <!--PROCESO-->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PROCESO</b></label>
@@ -99,6 +130,17 @@
                             </div>
                         </div>
 
+                        <!--TIEMPO DE VIDA  -->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>TIEMPO DE VIDA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="tiempoVida" id="tiempoVida" placeholder="&#xf252 Tiempo de vida">
+                            </div>
+                        </div>
+
+                        <!--LINEA -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>LINEA</b></label>
@@ -108,12 +150,23 @@
                             </div>
                         </div>
 
+                        <!--RACK/GABETA -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>RACK</b></label>
+                                <label><b>RACK/GABETA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="rack" id="rack" placeholder="&#xf233; Rack">
+                            </div>
+                        </div>
+
+                        <!--ESPACIO -->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>ESPACIO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="espacio" id="espacio" placeholder=" Espacio">
                             </div>
                         </div>
                     </div>
@@ -139,15 +192,6 @@
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>TIEMPO DE VIDA</b></label>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="tiempoVida" id="tiempoVida" placeholder="&#xf252 Tiempo de vida">
-                            </div>
-                        </div>
-
-                        <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PUNTOS DE REORDEN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
@@ -157,6 +201,22 @@
                     </div>
 
                     <div class="seccion" id="seccion4" style="display:none;">
+
+                        <!--PARO DE PROCESO-->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>IMPLICA PARO DE PROCESO</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <select class="px-1" name="" id="">
+                                    <option value="">SELECCIONE UNA OPCION</option>
+                                    <option value="SI">SI</option>
+                                    <option value="NO">NO</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--TIEMPO DE ENTREGA -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>TIEMPO DE ENTREGA</b></label>
@@ -166,15 +226,50 @@
                             </div>
                         </div>
 
+                        <!--COSTO EN PESOS-->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>MARCA</b></label>
+                                <label><b>COSTO EN PESOS</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder="&#xf0a3 Marca">
+                                <input class="in" name="" id="" placeholder="&#xf155; Costo en pesos">
                             </div>
                         </div>
 
+                        <!--COSTO EN DOLARES-->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>COSTO EN DOLARES</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="" id="" placeholder=" Costo en dolares ">
+                            </div>
+                        </div>
+
+                        <!--EXISTENCIA-->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>STOCK INICIAL</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="stock" id="stock" placeholder="&#xf01c; stock">
+                            </div>
+                        </div>
+
+                        <!--MARCA-->
+                         <!--
+                            <div class="row px-0 mx-0 my-3">
+                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                    <label><b>MARCA</b></label>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <input class="in" name="" id="" placeholder="&#xf0a3 Marca">
+                                </div>
+                            </div>
+                            -->
+
+                        <!--PROVEEDOR -->
+                        <!-- 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PROVEEDOR</b></label>
@@ -183,15 +278,7 @@
                                 <input class="in" name="" id="" placeholder="&#xf2b5 Proveedor">
                             </div>
                         </div>
-
-                        <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>TIPO DE REFACCIÓN</b></label>
-                            </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion">
-                            </div>
-                        </div>
+                        -->
                     </div>
                 </form>
             <!--Fin del formulario paginado para agregar un item -->
@@ -240,6 +327,8 @@
                 <div class="modal-body">
                     <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="formularioEditar" style="height: 100%; width:100%;">
                         <div class="" id="">
+
+                            <!--CATEGORIA/TIPO PIEZA -->
                             <div class="row px-0 mx-0 my-1">
                                 <div class="col-12 d-flex justify-content-center px-0">
                                     <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
@@ -250,12 +339,11 @@
                                         <option value="1">HOLDERS</option>
                                         <option value="2">HERRAMIENTAS</option>
                                         <option value="3">REFACCIONES</option>
-                                        <option value="4">INSERTOS</option>
-                                        <option value="5">CONSUMIBLES</option>
                                     </select>
                                 </div>
                             </div>
 
+                            <!--NOMBRE MODELO ITEM -->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>NOMBRE</b></label>
@@ -265,6 +353,7 @@
                                 </div>
                             </div>
 
+                            <!--COSTO-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>COSTO</b></label>
@@ -274,6 +363,7 @@
                                 </div>
                             </div>
 
+                            <!--CODIGO -->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>CÓDIGO</b></label>
@@ -283,6 +373,7 @@
                                 </div>
                             </div>
 
+                            <!--STOCK INICIAL -->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>STOCK INICIAL</b></label>
@@ -292,63 +383,71 @@
                                 </div>
                             </div>
 
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>INVENTARIABLE</b></label>
+                            <!--INVENTARIABLE -->
+                            <!--
+                                <div class="row px-0 mx-0 my-3">
+                                    <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                    <label><b>INVENTARIABLE</b></label>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-center">
+                                            <div>
+                                                <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ1fe" value="S" checked>
+                                                <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
+                                            </div>
+                                        
+                                            <div>
+                                                <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ2fe" value="N">
+                                                <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
+                                            </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                        <div>
-                                            <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ1fe" value="S" checked>
-                                            <label class="form-check-label mx-1" for="filtroSQ1">SI</label>
-                                        </div>
-                                    
-                                        <div>
-                                            <input class="radio" type="radio" name="filtroSQfe" id="filtroSQ2fe" value="N">
-                                            <label class="form-check-label mx-1" for="filtroSQ2">NO</label>
-                                        </div>
-                                </div>
-                            </div>
+                            -->
                         </div>
-                    
+
+                        <!--INCERTO-->
+                            <!-- ESTA SE PUEDE OMITIR NO ES MUY NECESARIA
+                                <div class="" id="" style="display:none;">
+                                    <div class="row px-0 mx-0 my-3">
+                                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                            <label><b>INCERTO</b></label>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <input class="in" name="" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row px-0 mx-0 my-3">
+                                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                            <label><b>PROCESO</b></label>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <input class="in" name="" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row px-0 mx-0 my-3">
+                                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                            <label><b>LINEA</b></label>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <input class="in" name="" id="">
+                                        </div>
+                                    </div>
+
+                                    <div class="row px-0 mx-0 my-3">
+                                        <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                            <label><b>RACK</b></label>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <input class="in" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            -->
+
+
                         <div class="" id="" style="display:none;">
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>INCERTO</b></label>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
-                                </div>
-                            </div>
-
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>PROCESO</b></label>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
-                                </div>
-                            </div>
-
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>LINEA</b></label>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
-                                </div>
-                            </div>
-
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>RACK</b></label>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="" id="" style="display:none;">
+                            <!--MINIMO-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>MÍNIMO</b></label>
@@ -358,6 +457,7 @@
                                 </div>
                             </div>
 
+                            <!--MAXIMO-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>MÁXIMO</b></label>
@@ -367,6 +467,7 @@
                                 </div>
                             </div>
 
+                            <!--TIEMPO DE VIDA -->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>TIEMPO DE VIDA</b></label>
@@ -376,6 +477,7 @@
                                 </div>
                             </div>
 
+                            <!--PUNTOS DE REORDEN-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>PUNTOS DE REORDEN</b></label>
@@ -387,6 +489,8 @@
                         </div>
 
                         <div class="" id="" style="display:none;">
+
+                            <!--TIEMPO DE ENTREGA -->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>TIEMPO DE ENTREGA</b></label>
@@ -396,6 +500,7 @@
                                 </div>
                             </div>
 
+                          <!--MARCA-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>MARCA</b></label>
@@ -405,6 +510,7 @@
                                 </div>
                             </div>
 
+                            <!--PROVEEDOR-->
                             <div class="row px-0 mx-0 my-3">
                                 <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                     <label><b>PROVEEDOR</b></label>
@@ -414,14 +520,16 @@
                                 </div>
                             </div>
 
-                            <div class="row px-0 mx-0 my-3">
-                                <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                    <label><b>TIPO DE REFACCIÓN</b></label>
+                            <!--
+                                <div class="row px-0 mx-0 my-3">
+                                    <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                        <label><b>TIPO DE REFACCIÓN</b></label>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <input class="in" name="" id="">
+                                    </div>
                                 </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <input class="in" name="" id="">
-                                </div>
-                            </div>
+                            -->
                         </div>
                     </form>
                 </div>
@@ -468,8 +576,6 @@
                 <option value="1">HOLDERS</option>
                 <option value="2">HERRAMIENTAS</option>
                 <option value="3">REFACCIONES</option>
-                <option value="4">TORNILLOS</option>
-                <option value="5">CONSUMIBLES</option>
             </select>
         </div>
     </div>
@@ -503,163 +609,3 @@
             <i class="fas fa-plus mx-1 py-1" style="font-size:20px;"></i> <span class="p-0 m-0">Agregar<span>
         </button>
     <!--Fin Boton para agregar un nuevo item -->
-
-    <script>
-        // Datos simulados
-            const items = Array.from({ length: 100}, (_, i) => `Elemento ${i + 1}`);
-            const resultsPerPage = 9;
-            let currentPage = 1;
-
-        // Función para mostrar los divs de los items
-            function displayItems(page) {
-
-                const formDataPa = new FormData();
-
-                fetch("./base_de_datos/operaciones_prestamos.php", {
-                    method: "POST",
-                    body: formDataPa,
-                })
-                    .then((response) => response.json())
-                    .then((data) => {
-                        items = data
-                    })
-                    .catch((error) => {
-                    console.log("Error:", error);
-                    });
-
-                const start = (page - 1) * resultsPerPage;
-                const end = start + resultsPerPage;
-                const paginatedItems = items.slice(start, end);
-                const container = document.getElementById('itemContainer');
-                container.innerHTML = ''; // Limpiar contenido anterior
-
-                    //Listado de los items registrados del catalogo
-                        paginatedItems.forEach(item => {
-                            const div = document.createElement('div');
-                            div.className = 'col-12 col-md-6 col-lg-4 mb-4';
-                            div.innerHTML = `<div class="carditemr border border-1 border-dark">
-                                                <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
-                                                    <p class="py-0 my-0"> <b>${item} </b></p>
-                                                    <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                            <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                            <span class="p-0 m-0">Editar<span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between px-2" style="width:100%" >
-                                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
-                                                </div>
-
-                                                <div class="d-flex justify-content-start px-2 py-2">
-                                                    <img src="../img/imagen.png" style="width: 100px; height:100px">
-                                                </div>
-                                            </div>`;
-
-                            container.appendChild(div);
-                        });
-                    //Fin Listado de los items registrados del catalogo
-                    
-                    updatePagination();
-                }
-        //Fin funcion para mostrar los divs de los items 
-
-
-        // Función para actualizar la paginación
-            function updatePagination() {
-                    const paginationContainer = document.getElementById('pagination');
-                    paginationContainer.innerHTML = ''; // Limpiar contenido anterior
-                    const totalPages = Math.ceil(items.length / resultsPerPage);
-
-                    for (let page = 1; page <= totalPages; page++) {
-                        const li = document.createElement('li');
-                        li.className = `page-item ${page === currentPage ? 'active' : ''}`;
-                        li.innerHTML = `<a class='page-link' href='#' >${page}</a>`;
-                        li.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            currentPage = page;
-                            displayItems(currentPage);
-                        });
-                        paginationContainer.appendChild(li);
-                    }
-                }
-
-            // Inicializar la vista
-            displayItems(currentPage);
-        //Fin de la funcion para actualizar la paginacion
-
-        
-        // Interaccion del formulario para registrar un item
-            const circles = document.querySelectorAll('div.circleAgregar .circle');
-            const lines = document.querySelectorAll('div.circleAgregar .line');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const sendBtn = document.getElementById('sendBtn');
-            var miFormulario = document.getElementById('miFormulario');
-
-            let currentStep = 0;
-
-            function updateProgress() {
-
-                    circles.forEach((circle, index) => {
-                        if (index <= currentStep) 
-                            circle.classList.add('active');
-                            
-                        else 
-                            circle.classList.remove('active');
-                            
-                    });
-
-                    lines.forEach((line, index) => {
-                        if (index < currentStep) 
-                            line.classList.add('active');
-                        else 
-                            line.classList.remove('active');
-                        
-                    });
-
-                    prevBtn.disabled = currentStep === 0;
-                    nextBtn.disabled = currentStep === circles.length - 1;
-                    
-                        if(currentStep == (circles.length - 1)) {
-                            sendBtn.style.display=' inline'
-                            nextBtn.style.display = 'none'; 
-                        }
-
-                        else {
-                                sendBtn.style.display = 'none'; 
-                                nextBtn.style.display = 'inline'; 
-                            }
-            }
-
-            prevBtn.addEventListener('click', () => {
-                miFormulario.style.opacity=0
-                setTimeout(function() {
-                        document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
-                        document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";              
-
-                        if (currentStep > 0) {
-                            currentStep--;
-                            updateProgress();
-                        }
-                        miFormulario.style.opacity=1
-                    }, 400)
-
-                
-            });
-
-            nextBtn.addEventListener('click', () => {
-                miFormulario.style.opacity=0
-                setTimeout(function() {
-                    document.getElementById(`seccion${ (currentStep+1)}`).style.display = "none";
-                    document.getElementById(`seccion${(currentStep+1) + 1}`).style.display = "block";
-
-
-                    if (currentStep < circles.length - 1) {
-                        currentStep++;
-                        updateProgress();
-                    }
-                    miFormulario.style.opacity=1
-                }, 400)
-            });
-        //Fin de la  interaccion del formulario para registrar un item
-    </script>

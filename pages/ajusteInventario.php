@@ -47,7 +47,7 @@
                             <div class="col-12 col-md-6 my-2 px-0">
                                 <div class="d-flex flex-column flex-wrap">
                                     <label class="fw-bold" style="">NOMBRE DE QUIEN HACE EL AJUSTE</label>
-                                    <input class="in me-sm-5 icon-input" id="NN" name="NN" type="number"  min=2 placeholder="&#xf007; ingrese algun valor" required>
+                                    <input class="in me-sm-5 icon-input" id="NN" name="NN" type="number"  min=2 placeholder="&#xf007; Ingrese algun valor" required>
                                 </div>
                             </div>
 

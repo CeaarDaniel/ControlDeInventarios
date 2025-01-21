@@ -13,23 +13,23 @@
                                 <div class="row">
                                     <div class="col-12 col-sm-6 my-1">
                                         <label for=""><b>NOMBRE O RAZÓN SOCIAL</b></label> <br>
-                                        <input class="in" type="text" placeholder="&#xf02d; nombre">
+                                        <input class="in" type="text" placeholder="&#xf02d; Nombre">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
                                         <label for="text"><b>NÚMERO DE IDENTIFICACIÓN FISCAL</b></label> <br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf2b9; identificacion fiscal" maxlength="">
+                                        <input id="" name="" type="text" class="in" placeholder="&#xf2b9; Identificacion fiscal" maxlength="">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
                                         <label for="text"><b>DIRECCIÓN</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf0ac; direccion">
+                                        <input id="" name="" type="text" class="in" placeholder="&#xf0ac; Direccion">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
                                         <label for="text"><b>TELÉFONO DE CONTACTO</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf095; telefono de contacto" >
+                                        <input id="" name="" type="text" class="in" placeholder="&#xf095; Telefono de contacto" >
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
                                         <label for="text"><b>CORREO ELECTRÓNICO</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf0e0; correo electronico">
+                                        <input id="" name="" type="text" class="in" placeholder="&#xf0e0; Correo electronico">
                                     </div>
                                 </div>
 
@@ -57,23 +57,23 @@
                     <div class="row">
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
                             <label for=""><b>NOMBRE O RAZÓN SOCIAL</b></label> <br>
-                            <input type="text" class="in" placeholder="&#xf02d; nombre ">
+                            <input type="text" class="in" placeholder="&#xf02d; Nombre ">
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start">
                             <label for="text"><b>NÚMERO DE IDENTIFICACIÓN FISCAL</b></label> <br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf2b9; identificacion fiscal">
+                            <input id="" name="" type="text" class="in" placeholder="&#xf2b9; Identificacion fiscal">
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
                             <label for="text"><b>DIRECCIÓN</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf0ac; direccion">
+                            <input id="" name="" type="text" class="in" placeholder="&#xf0ac; Direccion">
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start">
                             <label for="text"><b>TELÉFONO DE CONTACTO</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf095; telefono de contacto">
+                            <input id="" name="" type="text" class="in" placeholder="&#xf095; Telefono de contacto">
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
                             <label for="text"><b>CORREO ELECTRÓNICO</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf0e0; correo electronico">
+                            <input id="" name="" type="text" class="in" placeholder="&#xf0e0; Correo electronico">
                         </div>
                     </div>
                     

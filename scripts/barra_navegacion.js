@@ -4,8 +4,8 @@ var sidebar = document.querySelector("#sidebar")
 var container = document.querySelector(".main")
 
 //Mostrar el tooltip
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 //Fin mostrar el tooltipe
 
 
@@ -18,7 +18,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     })
 //Fin Evento para mostrar/ocultar
 
-//Evento para mostrar/ocultar la barra de naveacion al presionar el boton
+//Evento para mostrar/ocultar la barra de navegcacion al presionar el boton
     menu_btn.addEventListener("click", () => {
         sidebar.classList.add("active-nav")
     })
@@ -40,8 +40,8 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
     sidebar.addEventListener("mouseout", () => {
         if (window.innerWidth>=768){
-        sidebar.classList.remove("active-nav")
-        container.classList.remove("active-cont")
-    }
+            sidebar.classList.remove("active-nav")
+            container.classList.remove("active-cont")
+        }
     })
 //Fin Agrandar la ventana al pasar el mouse

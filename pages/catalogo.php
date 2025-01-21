@@ -29,9 +29,7 @@
 <body>
     
 <!--- Seccion del menu --->
-    <?php 
-        include('../menu.php') 
-    ?>
+    <?php include('../menu.php') ?>
 <!--- Fin de la seccion del menu --->
 
 <!--- Contenido de la pagina --->
@@ -73,5 +71,6 @@
 
 <!--Custom js -->
 <script src="../scripts/barra_navegacion.js"></script>
+<script src="../scripts/catalogo.js"></script>
 </body>
 </html>
