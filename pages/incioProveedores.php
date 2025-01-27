@@ -9,27 +9,27 @@
                 <div class="modal-body">
                     <div class="d-flex justify-content-center" style="width:100%">
                         <!--Fomulario editar proveedor -->
-                            <form id="RegistroProveedores" class="formBuscarPieza" style="width:100%">
+                            <form id="registroProveedoresUpdate" class="formBuscarPieza" style="width:100%">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 my-1">
-                                        <label for=""><b>NOMBRE O RAZÓN SOCIAL</b></label> <br>
-                                        <input class="in" type="text" placeholder="&#xf02d; Nombre">
+                                        <label for=""><b>NOMBRE DEL PROVEEDOR</b></label> <br>
+                                        <input id="nombreProveedorU" name="nombreProveedorU" class="in" type="text" placeholder="&#xf02d; Nombre del Proveedor" maxlength="200">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
-                                        <label for="text"><b>NÚMERO DE IDENTIFICACIÓN FISCAL</b></label> <br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf2b9; Identificacion fiscal" maxlength="">
+                                        <label for="text"><b>CLASIFICACIÓN</b></label> <br>
+                                        <input id="clasificacionU" name="clasificacionU" type="text" class="in" placeholder="&#xf2b9; Clasificación" maxlength="20">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
-                                        <label for="text"><b>DIRECCIÓN</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf0ac; Direccion">
+                                        <label for="text"><b>TIPO DE TRABAJO</b></label><br>
+                                        <input id="tipoTrabajoU" name="tipoTrabajoU" type="text" class="in" placeholder="&#xf0ac; Tipo de trabajo" maxlength="100">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
-                                        <label for="text"><b>TELÉFONO DE CONTACTO</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf095; Telefono de contacto" >
+                                        <label for="text"><b>DESCRIPCIÓN DE TRABAJO</b></label><br>
+                                        <input id="descripcionTrabajoU" name="descripcionTrabajoU" type="text" class="in" placeholder="&#xf095; Descripción de trabajo" maxlength="100">
                                     </div>
                                     <div class="col-12 col-sm-6 my-1">
-                                        <label for="text"><b>CORREO ELECTRÓNICO</b></label><br>
-                                        <input id="" name="" type="text" class="in" placeholder="&#xf0e0; Correo electronico">
+                                        <label for="text"><b>OBSERVACIONES</b></label><br>
+                                        <textarea id="observacionesU" name="observacionesU" type="text" class="in" placeholder="&#xf0e0; Observaciones" maxlength="100"></textarea>
                                     </div>
                                 </div>
 
@@ -53,32 +53,32 @@
 
     <!--Inicio Formulario de registro de proovedores -->
         <div class="d-flex justify-content-center" style="width:100%">
-                <form id="RegistroProveedores" class="formBuscarPieza" style="width:100%">
+                <form id="registroProveedores" class="formBuscarPieza" style="width:100%">
                     <div class="row">
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
-                            <label for=""><b>NOMBRE O RAZÓN SOCIAL</b></label> <br>
-                            <input type="text" class="in" placeholder="&#xf02d; Nombre ">
+                            <label for=""><b>NOMBRE DEL PROVEEDOR</b></label> <br>
+                            <input id="nombreProveedor" name="nombreProveedor" type="text" class="in" placeholder="&#xf02d; Nombre" maxlength="200" required>
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start">
-                            <label for="text"><b>NÚMERO DE IDENTIFICACIÓN FISCAL</b></label> <br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf2b9; Identificacion fiscal">
+                            <label for="text"><b>CLASIFICACIÓN</b></label> <br>
+                            <input id="clasificacion" name="clasificacion" type="text" class="in" placeholder="&#xf2b9; Clasificacion" maxlength="20" required>
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
-                            <label for="text"><b>DIRECCIÓN</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf0ac; Direccion">
+                            <label for="text"><b>TIPO DE TRABAJO</b></label><br>
+                            <input id="tipoTrabajo" name="tipoTrabajo" type="text" class="in" placeholder="&#xf0ac; Tipo de trabajo" maxlength="100" required>
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start">
-                            <label for="text"><b>TELÉFONO DE CONTACTO</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf095; Telefono de contacto">
+                            <label for="text"><b>DESCRIPCIÓN DE TRABAJO</b></label><br>
+                            <input id="descripcionTrabajo" name="descripcionTrabajo" type="text" class="in" placeholder="&#xf095; Descripcion de trabajo" maxlength="100">
                         </div>
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
-                            <label for="text"><b>CORREO ELECTRÓNICO</b></label><br>
-                            <input id="" name="" type="text" class="in" placeholder="&#xf0e0; Correo electronico">
+                            <label for="text"><b>OBSERVACIONES</b></label><br>
+                            <textarea id="observaciones" name="observaciones" type="text" class="in" placeholder="&#xf0e0; Observaciones" maxlength="100"></textarea>
                         </div>
                     </div>
                     
                     <div class="d-flex justify-content-center my-2" style="width:100%">
-                        <button class="btn boton" type="button">
+                        <button id="btnRegistrarProveedor" class="btn boton" type="button">
                             <i class="fa fa-cash-register mx-1 py-1" style="font-size:20px;"></i> 
                             <span>Registrar</span>
                         </button>

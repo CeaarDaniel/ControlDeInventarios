@@ -298,6 +298,10 @@
           font-size: 3.5vw;
         }
       }
+      
+      .invalido {
+        border-color: rgb(255, 0, 0);
+      }
 
       input{
         transition: 0.4s ease-in-out;

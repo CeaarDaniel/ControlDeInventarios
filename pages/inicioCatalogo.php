@@ -23,13 +23,14 @@ $respuesta = array();
         <div class="modal-body">
             <!--Formulario paginado para agregar un item -->
                 <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
+                    <!--SECCION 1-->
                     <div class="seccion" id="seccion1">
                         <div class="row px-0 mx-0 my-1">
                             <div class="col-12 d-flex justify-content-center px-0">
                                 <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <select class="in mt-3" name="nombreCategoria" id="nombreCategoria">
+                                <select class="in mt-3" name="nombreCategoria" id="nombreCategoria" required>
                                     <option value="" selected>&#xf002; --- CATEGORÍA---</option>
                                         <?php
                                             foreach($respuesta as $res)
@@ -68,7 +69,7 @@ $respuesta = array();
                                         <label><b>DESCRIPCION</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <textarea class="in" name="" id="" rows=3 placeholder="&#xf085 Descripcion" style="max-height:100px"></textarea>
+                                <textarea class="in" name="" id="" rows=3 placeholder="&#xf085 Descripcion" style="max-height:100px" required></textarea>
                                 <!-- <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion"> -->
                             </div>
                         </div>
@@ -106,6 +107,7 @@ $respuesta = array();
                           -->
                     </div>
                 
+                    <!-- SECCION 2 -->
                     <div class="seccion" id="seccion2" style="display:none;">
 
                         <!--INCERTO -->
@@ -171,13 +173,14 @@ $respuesta = array();
                         </div>
                     </div>
                 
+                    <!--SECCION 3 -->
                     <div class="seccion" id="seccion3" style="display:none;">
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>MÍNIMO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="minimo" id="minimo" placeholder="&#xf063; Minimo">
+                                <input class="in" name="minimo" id="minimo" placeholder="&#xf063; Minimo" required>
                             </div>
                         </div>
 
@@ -192,7 +195,7 @@ $respuesta = array();
 
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>PUNTOS DE REORDEN</b></label>
+                                <label><b>PUNTO DE REORDEN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="puntosReorden" id="puntosReorden" placeholder="&#xf021 Puntos de reorden">
@@ -200,6 +203,7 @@ $respuesta = array();
                         </div>
                     </div>
 
+                    <!--SECCION 4 -->
                     <div class="seccion" id="seccion4" style="display:none;">
 
                         <!--PARO DE PROCESO-->
@@ -232,7 +236,7 @@ $respuesta = array();
                                 <label><b>COSTO EN PESOS</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder="&#xf155; Costo en pesos">
+                                <input class="in" name="" id="" placeholder="&#xf155; Costo en pesos" required>
                             </div>
                         </div>
 
@@ -286,7 +290,6 @@ $respuesta = array();
 
         <!--Pie del modal -->
             <div class="modal-footer py-1" style="border: 0px solid white;">
-
                 <!--Botones adelante atras -->
                 <div class="d-flex justify-content-center" style="width:100%"> 
                     <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>Anterior</span></button>
