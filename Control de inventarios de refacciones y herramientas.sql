@@ -204,3 +204,6 @@ create table solicitudesRegresoMaterial();
 
 
 Alter table SPA_usuarios add numero_de_nomina nvarchar(50) null, autorizado nvarchar(5) null ;
+
+
+Alter table SCI_catalogo Alter column idUnidad_fk int null;

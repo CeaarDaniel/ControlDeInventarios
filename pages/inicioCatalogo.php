@@ -1,11 +1,16 @@
-<?php date_default_timezone_set('Etc/GMT+6');
-include('../api/conexion.php');
+<?php 
+    date_default_timezone_set('Etc/GMT+6');
+    include('../api/conexion.php');
 
+    $sn = "select idCategoria, nombreCategoria from SCI_categoria"; 
+    $consulta = $conn->prepare($sn);
+    $consulta->execute();
+    $respuesta = array();
 
-$sn = "select idCategoria, nombreCategoria from SCI_categoria"; 
-$consulta = $conn->prepare($sn);
-$consulta->execute();
-$respuesta = array();
+    $sql="select* from SCI_unidades where nombreUnidad='DOLAR'";
+    $consultaD = $conn->prepare($sql);
+    $consultaD->execute();
+    $dolar = $consultaD->fetch(PDO::FETCH_ASSOC);
 
 
      while($res = $consulta->fetch(PDO::FETCH_ASSOC))
@@ -31,7 +36,7 @@ $respuesta = array();
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <select class="in mt-3" name="nombreCategoria" id="nombreCategoria" required>
-                                    <option value="" selected>&#xf002; --- CATEGORÍA---</option>
+                                    <option id="idCategoria_fk" name="idCategoria_fk" value="" selected>&#xf002; --- CATEGORÍA---</option>
                                         <?php
                                             foreach($respuesta as $res)
                                                 echo '<option value="'.$res['idCategoria'].'">'.$res['nombreCategoria'].' </option>';
@@ -47,7 +52,7 @@ $respuesta = array();
                                 <label><b>CODIGO DEL ITEM</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="idItem" id="idItem" placeholder="&#xf02a; Codigo item">
+                                <input id="idItem" name="idItem" class="in" placeholder="&#xf02a; Codigo item" maxlength="100" required>
                             </div>
                         </div>
                         
@@ -58,7 +63,7 @@ $respuesta = array();
                                 <label><b>NOMBRE Y/O MODELO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="nombrePieza" id="nombrePieza" placeholder="&#xf02d; Nombre">
+                                <input class="in" name="nombreModeloItem" id="nombreModeloItem" maxlength="200" placeholder="&#xf02d; Nombre" required>
                             </div>
                         </div>
 
@@ -69,7 +74,7 @@ $respuesta = array();
                                         <label><b>DESCRIPCION</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <textarea class="in" name="" id="" rows=3 placeholder="&#xf085 Descripcion" style="max-height:100px" required></textarea>
+                                <textarea class="in" name="descripcionItem" id="descripcionItem" maxlength="200" rows=3 placeholder="&#xf085 Descripcion" style="max-height:100px"></textarea>
                                 <!-- <input class="in" name="" id="" placeholder="&#xf085 Tipo de refaccion"> -->
                             </div>
                         </div>
@@ -80,7 +85,7 @@ $respuesta = array();
                                 <label><b>IMAGEN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input type="file" class="in" name="" id="" placeholder=" Nombre">
+                                <input type="file" class="in" name="imagenItem" id="imagenItem">
                             </div>
                         </div>
 
@@ -122,13 +127,23 @@ $respuesta = array();
                             </div>
                         -->
 
+                        <!--LINEA -->
+                        <div class="row px-0 mx-0 my-3">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <label><b>LINEA</b></label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input class="in" name="idLinea" id="idLinea" maxlength=100 placeholder="&#xf275; Linea">
+                            </div>
+                        </div>
+
                         <!--PROCESO-->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PROCESO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="proceso" id="proceso" placeholder="&#xf162; Proceso">
+                                <input name="procesoA" id="procesoA" class="in" maxlength="100" type="text" placeholder="&#xf162; Proceso">
                             </div>
                         </div>
 
@@ -138,19 +153,27 @@ $respuesta = array();
                                 <label><b>TIEMPO DE VIDA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="tiempoVida" id="tiempoVida" placeholder="&#xf252 Tiempo de vida">
+                                <input type="text" class="in" name="tiempoVidaA" id="tiempoVidaA" maxlength="100" placeholder="&#xf252 Tiempo de vida">
                             </div>
                         </div>
 
-                        <!--LINEA -->
+                        <!--Boton para agregar procesos -->
+                        <div class="d-flex justify-content-center" style="width:100%">
+                                <button id="btnAgregarProceso" name="btnAgregarProceso" class="btn boton"><i class="fas fa-plus mx-1 py-1" style="font-size:20px;"></i></button>
+                        </div> 
+
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>LINEA</b></label>
+                                <input name="proceso" id="proceso" class="in" maxlength="100" type="text" placeholder="&#xf162; Proceso">
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="linea" id="linea" placeholder="&#xf275; Linea">
+                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                                <input type="text" class="in" name="tiempoVida" id="tiempoVida" maxlength="100" placeholder="&#xf252 Tiempo de vida">
                             </div>
                         </div>
+                    </div>
+                
+                    <!--SECCION 3 -->
+                    <div class="seccion" id="seccion3" style="display:none;">
 
                         <!--RACK/GABETA -->
                         <div class="row px-0 mx-0 my-3">
@@ -158,7 +181,7 @@ $respuesta = array();
                                 <label><b>RACK/GABETA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="rack" id="rack" placeholder="&#xf233; Rack">
+                                <input class="in" name="rackGabeta" id="rackGabeta" maxlength="50" placeholder="&#xf233; Rack">
                             </div>
                         </div>
 
@@ -168,37 +191,37 @@ $respuesta = array();
                                 <label><b>ESPACIO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="espacio" id="espacio" placeholder=" Espacio">
+                                <input class="in" id="espacio" name="espacio" type="text" maxlength="50" placeholder=" Espacio">
                             </div>
                         </div>
-                    </div>
-                
-                    <!--SECCION 3 -->
-                    <div class="seccion" id="seccion3" style="display:none;">
+
+                        <!--MINIMO -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>MÍNIMO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="minimo" id="minimo" placeholder="&#xf063; Minimo" required>
+                                <input id="minimo" name="minimo" type="number" class="in" step=1 min=0 placeholder="&#xf063; Minimo">
                             </div>
                         </div>
 
+                        <!--MAXIMO -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>MÁXIMO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="maximo" id="maximo" placeholder="&#xf062; Maximo">
+                                <input name="maximo" id="maximo" class="in" type="number" step=1 min=0 placeholder="&#xf062; Maximo">
                             </div>
                         </div>
 
+                        <!--PUNTO DE REORDEN -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PUNTO DE REORDEN</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="puntosReorden" id="puntosReorden" placeholder="&#xf021 Puntos de reorden">
+                                <input id="puntoReorden" name="puntoReorden" class="in" type="number" min=0 placeholder="&#xf021 Puntos de reorden">
                             </div>
                         </div>
                     </div>
@@ -212,7 +235,7 @@ $respuesta = array();
                                 <label><b>IMPLICA PARO DE PROCESO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <select class="px-1" name="" id="">
+                                <select id="paroProceso" name="paroProceso" class="px-1" required>
                                     <option value="">SELECCIONE UNA OPCION</option>
                                     <option value="SI">SI</option>
                                     <option value="NO">NO</option>
@@ -226,7 +249,7 @@ $respuesta = array();
                                 <label><b>TIEMPO DE ENTREGA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder="&#xf073; Tiempo de entrega">
+                                <input class="in" name="tiempoEntrega" id="tiempoEntrega" placeholder="&#xf073; Tiempo de entrega">
                             </div>
                         </div>
 
@@ -236,7 +259,7 @@ $respuesta = array();
                                 <label><b>COSTO EN PESOS</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder="&#xf155; Costo en pesos" required>
+                                <input id="costoPesos" name="costoPesos" class="in" type="number" min="0" step=0.01 placeholder="&#xf155; Costo en pesos" required>
                             </div>
                         </div>
 
@@ -246,7 +269,7 @@ $respuesta = array();
                                 <label><b>COSTO EN DOLARES</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="" id="" placeholder=" Costo en dolares ">
+                                <input id="costoDolar" name="costoDolar" class="in" type="number" step=0.01 placeholder="Costo en dolares" value="<?php echo $dolar['descripcionUnidad']?>">
                             </div>
                         </div>
 
@@ -256,7 +279,7 @@ $respuesta = array();
                                 <label><b>STOCK INICIAL</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="stock" id="stock" placeholder="&#xf01c; stock">
+                                <input name="existencia" id="existencia" class="in" type="number" min=0 placeholder="&#xf01c; stock" required>
                             </div>
                         </div>
 
@@ -291,11 +314,11 @@ $respuesta = array();
         <!--Pie del modal -->
             <div class="modal-footer py-1" style="border: 0px solid white;">
                 <!--Botones adelante atras -->
-                <div class="d-flex justify-content-center" style="width:100%"> 
-                    <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>Anterior</span></button>
-                    <button class="btn boton mx-1" id="nextBtn"><span>Siguiente</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
-                    <button class="btn boton mx-1" id="sendBtn" style="display: none;">Registrar<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
-                </div>
+                    <div class="d-flex justify-content-center" style="width:100%"> 
+                        <button class="btn boton mx-1" id="prevBtn" disabled><i class="fa fa-angle-left py-0 px-2 icono"></i> <span>Anterior</span></button>
+                        <button class="btn boton mx-1" id="nextBtn"><span>Siguiente</span> <i class="fa fa-angle-right py-0 px-2 icono"></i></button>
+                        <button class="btn boton mx-1" id="sendBtn" style="display: none;">Registrar<i class="fa-regular fa-paper-plane py-0 px-3 icono"></i></button>
+                    </div>
                 <!--Fin Botones adelante atras -->
 
                 <!--Lineas y circulos de progreso -->
@@ -584,8 +607,6 @@ $respuesta = array();
     </div>
 <!--Fin filtro de categoria -->
 
-
-
     <!--Contenedor de los items -->
         <div class=" py-3 px-3 px-md-0 mx-sm-0 mx-lg-1 mx-xl-5 my-3 rounded" style="background-color:#FFF">
             <input id="" name="" type="text" class="in icon-input my-3 mx-4" placeholder="&#xf02d; Nombre de la pieza" style="width:auto">
@@ -603,8 +624,6 @@ $respuesta = array();
             <!--Fin de numeracion de pagina -->
         </div>
     <!--Fin de el contenedor de los items -->
-        
-
 
 
     <!--Boton para agregar un nuevo item -->

@@ -1,4 +1,6 @@
 var nombreCategoria= document.getElementById("nombreCategoria");
+var btnAgregarProceso= document.getElementById("btnAgregarProceso"); 
+
 var seccion3 = document.getElementById("seccion3");
 nombreCategoria.addEventListener("change", modificarFormulario)
 // Datos simulados
@@ -195,6 +197,32 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 //Fin de la  interaccion del formulario para registrar un item
 
 
+/*Agregar procesos al formulario*/
+    btnAgregarProceso.addEventListener('click', function() {
+
+            var procesoA = document.getElementById('procesoA').value; // Input para tomar el proceseso que se agregara al registro
+            var tiempoVidaA = document.getElementById('tiempoVidaA').value; //Tiempo de vida correspondiente al proceso agregado
+
+        if ( procesoA!="" && procesoA!=null) {
+            var proceso = document.getElementById('proceso'); // Valor que se insertara en la base de datos
+            var tiempoVida = document.getElementById('tiempoVida'); //Valor que se insertara en la base de datos
+    
+            if (proceso.value !== "") {
+                proceso.value = proceso.value+','+procesoA;
+                tiempoVida.value = tiempoVida.value+','+tiempoVidaA; 
+            } else {
+                proceso.value = procesoA; // Si está vacío, simplemente asigna el nuevo valor
+                tiempoVida.value = tiempoVidaA; 
+            }
+        }
+
+        
+
+    })
+/*Fin agregar proceso*/
+
+
+
 //Funcon para modificar el formulario dee acuerdo a la categoria del item
 
 function modificarFormulario() {
@@ -221,18 +249,17 @@ function validarSeccion(currentStepfm) {
                 mensajeError.classList.add('invalido');
                 input.insertAdjacentElement("beforebegin", mensajeError)
         }
-            
       }
 
       else
-      if (input.checkValidity()) {
-        input.classList.remove('invalido');
-        // Buscar el elemento hermano anterior (el div que contiene el mensaje de error) y eliminarlo si existe
-        var mensajeError = input.previousElementSibling;
-        if (mensajeError && mensajeError.classList.contains('invalido')) {
-            mensajeError.remove();
+        if (input.checkValidity()) {
+            input.classList.remove('invalido');
+            // Buscar el elemento hermano anterior (el div que contiene el mensaje de error) y eliminarlo si existe
+            var mensajeError = input.previousElementSibling;
+            if (mensajeError && mensajeError.classList.contains('invalido')) {
+                mensajeError.remove();
+            }
         }
-    }
     });
 
     return esValido;

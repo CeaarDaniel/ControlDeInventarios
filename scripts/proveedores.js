@@ -1,6 +1,5 @@
 var btnRegistrarProveedor = document.getElementById("btnRegistrarProveedor")
 
-
 /*Registrar un proveedor*/
     btnRegistrarProveedor.addEventListener( 'click', ()=> {
         var formProveedores = document.getElementById("registroProveedores"); 
@@ -8,7 +7,6 @@ var btnRegistrarProveedor = document.getElementById("btnRegistrarProveedor")
         if (isValid) {
             var formDataRegistrar = new FormData(formProveedores); 
             formDataRegistrar.append("opcion", "2");
-        
 
             fetch("../api/proveedores.php", {
                 method: "POST",
@@ -21,9 +19,7 @@ var btnRegistrarProveedor = document.getElementById("btnRegistrarProveedor")
             .catch((error) => {
                 console.log(error);
             });
-        }
-
-   
+        }   
     })
 /*Fin registrar un proveedor*/
 
