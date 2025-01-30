@@ -1,6 +1,14 @@
 var nombreCategoria= document.getElementById("nombreCategoria");
 var btnAgregarProceso= document.getElementById("btnAgregarProceso"); 
 
+document.getElementById('tiempoVida').addEventListener('keydown', function(event) {
+    event.preventDefault();
+  });
+
+  document.getElementById('proceso').addEventListener('keydown', function(event) {
+    event.preventDefault();
+  });
+
 var seccion3 = document.getElementById("seccion3");
 nombreCategoria.addEventListener("change", modificarFormulario)
 // Datos simulados
@@ -39,8 +47,8 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                                         <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
                                             <p class="py-0 my-0"> <b>${item} </b></p>
                                             <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                    <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                    <span class="p-0 m-0">Editar<span>
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
                                             </button>
                                         </div>
 
@@ -131,19 +139,16 @@ nombreCategoria.addEventListener("change", modificarFormulario)
         miFormulario.style.opacity=0
         setTimeout(function() {
 
-            if(nombreCategoria.value=="2" && currentStep== 3){
+            /* if(nombreCategoria.value=="2" && currentStep== 3){
                 document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
                 document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";  
 
                 if (currentStep > 0) 
                     currentStep--; 
-            }
+            } */
 
-
-                    document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
-                    document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";  
-                
-            
+                document.getElementById(`seccion${(currentStep+1)}`).style.display = "none";
+                document.getElementById(`seccion${(currentStep+1) - 1}`).style.display = "block";  
 
                 if (currentStep > 0) {
                     currentStep--;
@@ -165,13 +170,14 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                 miFormulario.style.opacity=0
                 setTimeout(function() {
 
+                    /*
                     if(nombreCategoria.value=="2" && currentStep== 1){
                         document.getElementById(`seccion${ (currentStep+1)}`).style.display = "none";
                         document.getElementById(`seccion${(currentStep+1) + 1}`).style.display = "block";
 
                             if (currentStep < circles.length - 1) 
                                 currentStep++;
-                    }
+                    } */
 
                     document.getElementById(`seccion${ (currentStep+1)}`).style.display = "none";
                     document.getElementById(`seccion${(currentStep+1) + 1}`).style.display = "block";
@@ -199,11 +205,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 
 /*Agregar procesos al formulario*/
     btnAgregarProceso.addEventListener('click', function() {
+        var procesoA = document.getElementById('procesoA').value; // Input para tomar el proceseso que se agregara al registro
+        var tiempoVidaA = document.getElementById('tiempoVidaA').value; //Tiempo de vida correspondiente al proceso agregado
 
-            var procesoA = document.getElementById('procesoA').value; // Input para tomar el proceseso que se agregara al registro
-            var tiempoVidaA = document.getElementById('tiempoVidaA').value; //Tiempo de vida correspondiente al proceso agregado
-
-        if ( procesoA!="" && procesoA!=null) {
+        if ( procesoA!="" && procesoA!=null && tiempoVidaA!="" && tiempoVidaA!=null) {
             var proceso = document.getElementById('proceso'); // Valor que se insertara en la base de datos
             var tiempoVida = document.getElementById('tiempoVida'); //Valor que se insertara en la base de datos
     
@@ -215,9 +220,6 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                 tiempoVida.value = tiempoVidaA; 
             }
         }
-
-        
-
     })
 /*Fin agregar proceso*/
 
@@ -226,7 +228,42 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 //Funcon para modificar el formulario dee acuerdo a la categoria del item
 
 function modificarFormulario() {
-    var categoria = nombreCategoria.value;   
+    var categoria = nombreCategoria.value;    
+    var tiempoVida = document.getElementById("tiempoVida");
+    var proceso = document.getElementById("proceso");
+
+
+    if(categoria=="1"){  //HOLDERS 
+        document.querySelector('#tiempoVida').required = false; //false;
+        document.querySelector('#proceso').required = true; //true;
+        document.querySelector('#idLinea').required = true; //true;
+        document.querySelector('#divminimo').style.display = 'block'
+        document.querySelector('#divmaximo').style.display = 'block'
+        document.querySelector('#divpuntoReorden').style.display = 'block' 
+        document.querySelector('#rackGabeta').required = false;
+    }
+
+    else 
+        if(categoria=="2")   //HERRAMIENTA
+        {
+            document.querySelector('#tiempoVida').required = true; //true;
+            document.querySelector('#proceso').required = true; //true;
+            document.querySelector('#idLinea').required = true; //true;
+            document.querySelector('#divminimo').style.display = 'none'
+            document.querySelector('#divmaximo').style.display = 'none'
+            document.querySelector('#divpuntoReorden').style.display = 'none'
+            document.querySelector('#rackGabeta').required = false;
+        }
+
+    else if(categoria=="3"){ //REFACCIONES
+        document.querySelector('#tiempoVida').required = false; //false;
+        document.querySelector('#proceso').required = false; //false;
+        document.querySelector('#idLinea').required = false; //true;
+        document.querySelector('#divminimo').style.display = 'block'
+        document.querySelector('#divmaximo').style.display = 'block'
+        document.querySelector('#divpuntoReorden').style.display = 'block'
+        document.querySelector('#rackGabeta').required = true;
+    }
 }
 
 
@@ -263,4 +300,4 @@ function validarSeccion(currentStepfm) {
     });
 
     return esValido;
-  }
+}

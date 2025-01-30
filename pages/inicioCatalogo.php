@@ -162,12 +162,13 @@
                                 <button id="btnAgregarProceso" name="btnAgregarProceso" class="btn boton"><i class="fas fa-plus mx-1 py-1" style="font-size:20px;"></i></button>
                         </div> 
 
+                        <!--PROCESO Y TIEMPO DE VIDA QUE SE INCERTARA EN LA BASE DE DATOS -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <input name="proceso" id="proceso" class="in" maxlength="100" type="text" placeholder="&#xf162; Proceso">
+                                <input name="proceso" id="proceso" class="in" maxlength="100" type="text" placeholder="&#xf162; Proceso" style="pointer-events: none; ">
                             </div>
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <input type="text" class="in" name="tiempoVida" id="tiempoVida" maxlength="100" placeholder="&#xf252 Tiempo de vida">
+                                <input type="text" class="in" name="tiempoVida" id="tiempoVida" maxlength="100" placeholder="&#xf252 Tiempo de vida" style="pointer-events: none; ">
                             </div>
                         </div>
                     </div>
@@ -196,7 +197,7 @@
                         </div>
 
                         <!--MINIMO -->
-                        <div class="row px-0 mx-0 my-3">
+                        <div id="divminimo" class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>MÍNIMO</b></label>
                             </div>
@@ -206,7 +207,7 @@
                         </div>
 
                         <!--MAXIMO -->
-                        <div class="row px-0 mx-0 my-3">
+                        <div id="divmaximo" class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>MÁXIMO</b></label>
                             </div>
@@ -216,7 +217,7 @@
                         </div>
 
                         <!--PUNTO DE REORDEN -->
-                        <div class="row px-0 mx-0 my-3">
+                        <div id="divpuntoReorden" class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>PUNTO DE REORDEN</b></label>
                             </div>
@@ -233,7 +234,7 @@
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>IMPLICA PARO DE PROCESO</b></label>
-                            </div>
+                            </div> 
                             <div class="col-12 d-flex justify-content-center">
                                 <select id="paroProceso" name="paroProceso" class="px-1" required>
                                     <option value="">SELECCIONE UNA OPCION</option>
