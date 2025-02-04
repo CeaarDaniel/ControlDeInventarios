@@ -1,5 +1,8 @@
-var nombreCategoria= document.getElementById("nombreCategoria");
-var btnAgregarProceso= document.getElementById("btnAgregarProceso"); 
+var nombreCategoria= document.getElementById("nombreCategoria"); //SELECT DE CATEGORIA
+var btnAgregarProceso= document.getElementById("btnAgregarProceso");  //BOTON "+" PARA LOS INPUT DE PROCESO Y TIEMPO DE VIDA
+var valorCambio= document.getElementById("valorCambio");  //INPUT PARA CAPTURAR EL VALOR DE DOLAR PARA LA CONVERSION A PESOS
+var costoPesos= document.getElementById("costoPesos"); //INPUT PARA LA CAPTURA DEL COSTO DE LA PIEZA EN PESOS
+var costoDolar = document.getElementById("costoDolar");
 
 document.getElementById('tiempoVida').addEventListener('keydown', function(event) {
     event.preventDefault();
@@ -100,7 +103,7 @@ nombreCategoria.addEventListener("change", modificarFormulario)
     const prevBtn = document.getElementById('prevBtn'); //Boton de regreso
     const nextBtn = document.getElementById('nextBtn'); //Boton de adelante
     const sendBtn = document.getElementById('sendBtn'); //Envio de formulario
-    var miFormulario = document.getElementById('miFormulario');
+    var miFormulario = document.getElementById('miFormulario'); //FORMULARIO PARA AGREGAR UN ITMEM
 
     let currentStep = 0;
 
@@ -197,7 +200,22 @@ nombreCategoria.addEventListener("change", modificarFormulario)
         isValid = validarSeccion(currentStep+1);
 
         if(isValid){
-            alert("Se ha enviado el formulario")
+            var formData = new FormData(miFormulario);
+            formData.append("opcion", "2");
+            var requestOptions = {
+                method: 'POST',
+                body: formData
+            };
+    
+            console.log(formData);
+            fetch('../api/catalogo.php', requestOptions)
+                .then(response => response.text())
+                .then((data) => {
+                    console.log(data);
+
+                }).catch(error => {
+                    console.log('Error:', error);
+                })
         }
     })
 //Fin de la  interaccion del formulario para registrar un item
@@ -224,9 +242,17 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 /*Fin agregar proceso*/
 
 
+//Funcion para calcular 
+costoDolar.addEventListener('change', function(){
+ costoPesos.value = (valorCambio.value * costoDolar.value).toFixed(2);
+    if(costoDolar.value!='' && costoDolar !=null) 
+        costoPesos.disabled = true;
+
+    else 
+        costoPesos.disabled = false;
+})
 
 //Funcon para modificar el formulario dee acuerdo a la categoria del item
-
 function modificarFormulario() {
     var categoria = nombreCategoria.value;    
     var tiempoVida = document.getElementById("tiempoVida");
@@ -266,7 +292,7 @@ function modificarFormulario() {
     }
 }
 
-
+/*Funcion para validar el llendado de los inputs*/
 function validarSeccion(currentStepfm) {
     // Obtener todos los inputs de la sección específica
     var seccion = document.getElementById(`seccion${(currentStepfm)}`);

@@ -143,7 +143,7 @@
                                 <label><b>PROCESO</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input name="procesoA" id="procesoA" class="in" maxlength="100" type="text" placeholder="&#xf162; Proceso">
+                                <input name="procesoA" id="procesoA" class="in" maxlength="5" type="text" placeholder="&#xf162; Proceso">
                             </div>
                         </div>
 
@@ -259,20 +259,32 @@
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <label><b>COSTO EN PESOS</b></label>
                             </div>
+                            <!-- COSTO EN PESOS-->
                             <div class="col-12 d-flex justify-content-center">
                                 <input id="costoPesos" name="costoPesos" class="in" type="number" min="0" step=0.01 placeholder="&#xf155; Costo en pesos" required>
                             </div>
                         </div>
 
-                        <!--COSTO EN DOLARES-->
+
                         <div class="row px-0 mx-0 my-3">
-                            <div class="col-12 d-flex justify-content-center align-items-center px-0">
+                            <div class="col-6 d-flex justify-content-center align-items-center px-0">
                                 <label><b>COSTO EN DOLARES</b></label>
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <input id="costoDolar" name="costoDolar" class="in" type="number" step=0.01 placeholder="Costo en dolares" value="<?php echo $dolar['descripcionUnidad']?>">
+                            <div class="col-6 d-flex justify-content-center align-items-center px-0">
+                                <label><b>VALOR DE CAMBIO</b></label>
+                            </div>
+
+                            <!--COSTO EN DOLARES-->
+                            <div class="col-6 d-flex justify-content-center">
+                                <input id="costoDolar" name="costoDolar" class="in" type="number" min=0 step=0.01 placeholder="Costo en dolares">
+                            </div>
+
+                            <!--VALOR DE CAMBIO-->
+                            <div class="col-6 d-flex justify-content-center">
+                                <input id="valorCambio" name="valorCambio" class="in" type="number" min=0 step=0.01 placeholder="Valor de cambio" value="<?php echo $dolar['descripcionUnidad']?>">
                             </div>
                         </div>
+
 
                         <!--EXISTENCIA-->
                         <div class="row px-0 mx-0 my-3">
