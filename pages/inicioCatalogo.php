@@ -170,6 +170,10 @@
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
                                 <input type="text" class="in" name="tiempoVida" id="tiempoVida" maxlength="100" placeholder="&#xf252 Tiempo de vida" style="pointer-events: none; ">
                             </div>
+
+                            <div class="d-flex justify-content-center" style="width:100%">
+                                <button id="btnEliminarProceso" name="btnEliminarProceso" class="btn"><i class="fas fa-times mx-1 py-1" style="font-size:20px;"></i></button>
+                            </div> 
                         </div>
                     </div>
                 

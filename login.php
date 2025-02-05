@@ -6,7 +6,6 @@
                     class="my-2 p-5 border rounded"
                     style="background-color:#D8DCDC; max-width:400px;">
 
-
                         <div class="d-flex justify-content-center" style="width:100%">
 
                             <img src="./img/imagen.png" alt="" style="max-height:100px; width:100px;">

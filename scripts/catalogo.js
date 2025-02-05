@@ -1,5 +1,6 @@
 var nombreCategoria= document.getElementById("nombreCategoria"); //SELECT DE CATEGORIA
 var btnAgregarProceso= document.getElementById("btnAgregarProceso");  //BOTON "+" PARA LOS INPUT DE PROCESO Y TIEMPO DE VIDA
+var btnEliminarProceso= document.getElementById("btnEliminarProceso");  // BOTON X PARA BORRAR LOS VALORES DE LOS INPUT
 var valorCambio= document.getElementById("valorCambio");  //INPUT PARA CAPTURAR EL VALOR DE DOLAR PARA LA CONVERSION A PESOS
 var costoPesos= document.getElementById("costoPesos"); //INPUT PARA LA CAPTURA DEL COSTO DE LA PIEZA EN PESOS
 var costoDolar = document.getElementById("costoDolar");
@@ -222,27 +223,38 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 
 
 /*Agregar procesos al formulario*/
-    btnAgregarProceso.addEventListener('click', function() {
-        var procesoA = document.getElementById('procesoA').value; // Input para tomar el proceseso que se agregara al registro
-        var tiempoVidaA = document.getElementById('tiempoVidaA').value; //Tiempo de vida correspondiente al proceso agregado
+btnAgregarProceso.addEventListener('click', function() {
+    var procesoA = document.getElementById('procesoA').value; // Input para tomar el proceseso que se agregara al registro
+    var tiempoVidaA = document.getElementById('tiempoVidaA').value; //Tiempo de vida correspondiente al proceso agregado
 
-        if ( procesoA!="" && procesoA!=null && tiempoVidaA!="" && tiempoVidaA!=null) {
-            var proceso = document.getElementById('proceso'); // Valor que se insertara en la base de datos
-            var tiempoVida = document.getElementById('tiempoVida'); //Valor que se insertara en la base de datos
+    if(nombreCategoria.value=='1' && (tiempoVidaA=="" || tiempoVidaA==null)) 
+        tiempoVidaA='0'
     
-            if (proceso.value !== "") {
-                proceso.value = proceso.value+','+procesoA;
-                tiempoVida.value = tiempoVida.value+','+tiempoVidaA; 
-            } else {
-                proceso.value = procesoA; // Si está vacío, simplemente asigna el nuevo valor
-                tiempoVida.value = tiempoVidaA; 
-            }
+
+    if ( procesoA!="" && procesoA!=null && tiempoVidaA!="" && tiempoVidaA!=null) {
+        var proceso = document.getElementById('proceso'); // Valor que se insertara en la base de datos
+        var tiempoVida = document.getElementById('tiempoVida'); //Valor que se insertara en la base de datos
+
+        if (proceso.value !== "") {
+            proceso.value = proceso.value+','+procesoA;
+            tiempoVida.value = tiempoVida.value+','+tiempoVidaA; 
+        } else {
+            proceso.value = procesoA; // Si está vacío, simplemente asigna el nuevo valor
+            tiempoVida.value = tiempoVidaA; 
         }
-    })
+    }
+})
 /*Fin agregar proceso*/
 
+/*Borrar proceso*/
+    btnEliminarProceso.addEventListener('click', function(){
+        document.getElementById('proceso').value='';
+        document.getElementById('tiempoVida').value=''; 
+    })
+/*Fin Borrar proceso*/
 
-//Funcion para calcular 
+
+//Funcion para calcular el costo en pesos 
 costoDolar.addEventListener('change', function(){
  costoPesos.value = (valorCambio.value * costoDolar.value).toFixed(2);
     if(costoDolar.value!='' && costoDolar !=null) 
@@ -267,6 +279,7 @@ function modificarFormulario() {
         document.querySelector('#divmaximo').style.display = 'block'
         document.querySelector('#divpuntoReorden').style.display = 'block' 
         document.querySelector('#rackGabeta').required = false;
+        document.querySelector('#espacio').required = false; 
     }
 
     else 
@@ -279,6 +292,7 @@ function modificarFormulario() {
             document.querySelector('#divmaximo').style.display = 'none'
             document.querySelector('#divpuntoReorden').style.display = 'none'
             document.querySelector('#rackGabeta').required = false;
+            document.querySelector('#espacio').required = false; 
         }
 
     else if(categoria=="3"){ //REFACCIONES
@@ -289,6 +303,7 @@ function modificarFormulario() {
         document.querySelector('#divmaximo').style.display = 'block'
         document.querySelector('#divpuntoReorden').style.display = 'block'
         document.querySelector('#rackGabeta').required = true;
+        document.querySelector('#espacio').required = true; 
     }
 }
 
