@@ -1,4 +1,4 @@
-var nombreCategoria= document.getElementById("nombreCategoria"); //SELECT DE CATEGORIA
+var nombreCategoria= document.getElementById("idCategoria_fk"); //SELECT DE CATEGORIA
 var btnAgregarProceso= document.getElementById("btnAgregarProceso");  //BOTON "+" PARA LOS INPUT DE PROCESO Y TIEMPO DE VIDA
 var btnEliminarProceso= document.getElementById("btnEliminarProceso");  // BOTON X PARA BORRAR LOS VALORES DE LOS INPUT
 var valorCambio= document.getElementById("valorCambio");  //INPUT PARA CAPTURAR EL VALOR DE DOLAR PARA LA CONVERSION A PESOS
@@ -104,7 +104,7 @@ nombreCategoria.addEventListener("change", modificarFormulario)
     const prevBtn = document.getElementById('prevBtn'); //Boton de regreso
     const nextBtn = document.getElementById('nextBtn'); //Boton de adelante
     const sendBtn = document.getElementById('sendBtn'); //Envio de formulario
-    var miFormulario = document.getElementById('miFormulario'); //FORMULARIO PARA AGREGAR UN ITMEM
+    var miFormulario = document.getElementById('formularioAgregar'); //FORMULARIO PARA AGREGAR UN ITMEM
 
     let currentStep = 0;
 
@@ -207,13 +207,19 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                 method: 'POST',
                 body: formData
             };
-    
-            console.log(formData);
             fetch('../api/catalogo.php', requestOptions)
-                .then(response => response.text())
+                .then(response => response.json())
                 .then((data) => {
-                    console.log(data);
-
+                    if(data.OK) {
+                            console.log(data.OK)
+                        fetch('../api/inventario.php', requestOptions)
+                        .then(response => response.text())
+                        .then((data) => {
+                                alert(data)
+                        }).catch(error => {
+                            console.log('Error:', error);
+                        })
+                    }
                 }).catch(error => {
                     console.log('Error:', error);
                 })

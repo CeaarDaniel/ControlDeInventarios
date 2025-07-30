@@ -13,6 +13,9 @@
     $dolar = $consultaD->fetch(PDO::FETCH_ASSOC);
 
 
+    $sqlLinea = 'SELECT idLinea, nombreLinea from SCI_Linea';
+    $lineas = $conn->prepare($sqlLinea); 
+    $lineas->execute();
      while($res = $consulta->fetch(PDO::FETCH_ASSOC))
            $respuesta[] = $res;
 ?>
@@ -27,7 +30,7 @@
       </div>
         <div class="modal-body">
             <!--Formulario paginado para agregar un item -->
-                <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="miFormulario" style="height: 100%; width:100%;">
+                <form class="px-0 mx-0 d-flex justify-content-center align-items-center" id="formularioAgregar" style="height: 100%; width:100%;">
                     <!--SECCION 1-->
                     <div class="seccion" id="seccion1">
                         <div class="row px-0 mx-0 my-1">
@@ -35,8 +38,8 @@
                                 <label><b>CATEGORÍA/TIPO DE PIEZA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <select class="in mt-3" name="nombreCategoria" id="nombreCategoria" required>
-                                    <option id="idCategoria_fk" name="idCategoria_fk" value="" selected>&#xf002; --- CATEGORÍA---</option>
+                                <select class="in mt-3" id="idCategoria_fk" name="idCategoria_fk" required>
+                                    <option  value="" selected>&#xf002; --- CATEGORÍA---</option>
                                         <?php
                                             foreach($respuesta as $res)
                                                 echo '<option value="'.$res['idCategoria'].'">'.$res['nombreCategoria'].' </option>';
@@ -133,7 +136,13 @@
                                 <label><b>LINEA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="idLinea" id="idLinea" maxlength=100 placeholder="&#xf275; Linea">
+                                <select class="in" name="idLinea" id="idLinea">
+                                    <option value="">&#xf275; ---- Linea ----</option>
+                                    <?php
+                                        while($linea = $lineas->fetch(PDO::FETCH_ASSOC))
+                                            echo '<option value= '.$linea['idLinea'].'>'.$linea['nombreLinea'].'</option>'
+                                    ?>
+                                </select>
                             </div>
                         </div>
 
@@ -254,7 +263,7 @@
                                 <label><b>TIEMPO DE ENTREGA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
-                                <input class="in" name="tiempoEntrega" id="tiempoEntrega" placeholder="&#xf073; Tiempo de entrega">
+                                <input class="in" name="tiempoEntrega" id="tiempoEntrega" placeholder="&#xf073; Tiempo en semanas">
                             </div>
                         </div>
 

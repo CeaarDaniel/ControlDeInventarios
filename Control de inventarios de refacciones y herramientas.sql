@@ -186,8 +186,6 @@ create table solicitudesRegresoMaterial();
 /* create table ubicacion();*/
 
 
-
-
  select* from SCI_usuarios;
  select* from SCI_proveedores;
  select* from SCI_unidades;
@@ -199,8 +197,6 @@ create table solicitudesRegresoMaterial();
  select* from SCI_inventario;
  select* from SCI_historialCostos;
  select* from SCI_ajusteInventario;
-
-
 
 
 Alter table SPA_usuarios add numero_de_nomina nvarchar(50) null, autorizado nvarchar(5) null ;

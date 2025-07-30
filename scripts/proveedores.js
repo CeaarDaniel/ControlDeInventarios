@@ -46,14 +46,14 @@ function validarSeccion(currentStepfm) {
       }
 
       else
-      if (input.checkValidity()) {
-        input.classList.remove('invalido');
-        // Buscar el elemento hermano anterior (el div que contiene el mensaje de error) y eliminarlo si existe
-        var mensajeError = input.previousElementSibling;
-        if (mensajeError && mensajeError.classList.contains('invalido')) {
-            mensajeError.remove();
+        if (input.checkValidity()) {
+            input.classList.remove('invalido');
+            // Buscar el elemento hermano anterior (el div que contiene el mensaje de error) y eliminarlo si existe
+            var mensajeError = input.previousElementSibling;
+            if (mensajeError && mensajeError.classList.contains('invalido')) {
+                mensajeError.remove();
+            }
         }
-    }
     });
 
     return esValido;
@@ -183,7 +183,7 @@ function actualizarProveedor(event){
 /*Borrar registro de un proveedor*/
     function eliminarProveedor(event){
         const boton = event.target.closest("button");
-        var idProveedor = boton.getAttribute('data-idProveedo3r');
+        var idProveedor = boton.getAttribute('data-idproveedor');
 
         var formData = new FormData(); 
             formData.append("opcion",4);
@@ -195,7 +195,7 @@ function actualizarProveedor(event){
             })
                 .then((response) => response.text())
                 .then((data) => {
-                    alert(data);
+                    alert(data.OK);
                     mostrarProovedores();
                 })
                 .catch((error) => {

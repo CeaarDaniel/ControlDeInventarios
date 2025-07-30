@@ -6,8 +6,6 @@
                 <option value="1">HOLDER</option>
                 <option value="2">FERACCIONES</option>
                 <option value="3">HERRAMIENTAS</option>
-                <option value="4">CONSUMIBLES</option>
-                <option value="5">CATEGORIA 5</option>
             </select>
             <div class="d-flex mt-1 justify-content-center">
                 <button class="btn boton py-0 my-0">Buscar</button>

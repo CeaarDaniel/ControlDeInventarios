@@ -14,6 +14,7 @@ if($opcion=='1'){
 }
 
 //INCERTAR UN REGISTRO
+else
     if($opcion=='2'){
             $idItem = isset($_POST['idItem']) ? $_POST['idItem'] : '';
             $idCategoria_fk = isset($_POST['idCategoria_fk']) ? $_POST['idCategoria_fk'] : ''; 
@@ -29,27 +30,39 @@ if($opcion=='1'){
             $critico='NA';
             //$idUnidad_fk
 
-            //EVALUAR SI ES UNA REFACCION
-            if($idCategoria_fk=='3'){
-                //EVALUAR SI ES UN ITEM CRITICO
-                if($tiempoEntrega != NULL && $tiempoEntrega > 6) $critico='SI';
-
-                else 
-                    if ($paroProceso==='SI') $critico = 'SI';
-
-                else $critico = 'NO';
+            //EVALUAR SI YA EXISTE EL REGISTRO EN EL CATALOGO 
+                $sqlEval = 'SELECT COUNT(*) from SCI_catalogo where idItem = :idItem';
+                $count = $conn->prepare($sqlEval);
+                $count->bindParam(':idItem', $idItem);
+                $count->execute();
+                if ($count->fetchColumn() > 0) {
+                    $respuesta = array('OK' => "YA EXISTE ESTE ITEM EN EL CATALOGO");
+                    echo json_encode($respuesta);
+                    die();
             }
             
+
+            //EVALUAR SI ES UNA REFACCION
+                if($idCategoria_fk=='3'){
+                    //EVALUAR SI ES UN ITEM CRITICO
+                    if($tiempoEntrega != NULL && $tiempoEntrega > 6) $critico='SI';
+
+                    else 
+                        if ($paroProceso==='SI') $critico = 'SI';
+
+                    else $critico = 'NO';
+                }
+            
             //Si la imagen esta vacio, si no existe en el array formato o no se pudo subir a la carpeta
-            if (empty($imagenItem) || !in_array($formatoImagen, ['image/jpeg', 'image/png', 'image/gif', 'image/bmp']) || !move_uploaded_file($_FILES['imagenItem']['tmp_name'], '../img/items'.$imagenItem)) {
+            if (empty($imagenItem) || !in_array($formatoImagen, ['image/jpeg', 'image/png', 'image/gif', 'image/bmp']) || !move_uploaded_file($_FILES['imagenItem']['tmp_name'], '../img/items/'.$imagenItem)) {
                 echo json_encode(array("error"=>'ERROR AL CARGAR LA IMAGEN' ));
                 die();
             }
 
-
-            $sql = "INSERT INTO SCI_catalogo(idItem, idCategoria_fk, costoPesos, costoDolar, existencia, nombreModeloItem, 
+            //DE MOENTO EL VALOR DE ID_UNIDAD SE INSERTE DIRECTAMENTE, PERO YA MAS ADELANTE HAY QUE CAMBIARLO PRO EL VALOR SELECCIONADO
+            $sql = "INSERT INTO SCI_catalogo(idItem, idCategoria_fk, idUnidad_fk, costoPesos, costoDolar, existencia, nombreModeloItem, 
                                              descripcionItem, imagenItem, tiempoEntrega, paroProceso, critico) 
-                    VALUES (:idItem, :idCategoria_fk, :costoPesos, :costoDolar, :existencia, :nombreModeloItem,
+                    VALUES (:idItem, :idCategoria_fk, 2, :costoPesos, :costoDolar, :existencia, :nombreModeloItem,
                             :descripcionItem, :imagenItem, :tiempoEntrega, :paroProceso, :critico)";
 
             $stmt = $conn->prepare($sql);
@@ -73,5 +86,10 @@ if($opcion=='1'){
                     $respuesta = array('OK' => $stmt->errorInfo()[2]);
                         
                 echo json_encode($respuesta);
+    }
+
+    //EDITAR UN REGISTRO
+    if($opcion=='3 '){
+
     }
 ?>
