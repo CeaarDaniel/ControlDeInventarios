@@ -1,4 +1,4 @@
-var nombreCategoria= document.getElementById("nombreCategoria"); //SELECT DE CATEGORIA
+var nombreCategoria= document.getElementById("idCategoria_fk"); //SELECT DE CATEGORIA
 var btnAgregarProceso= document.getElementById("btnAgregarProceso");  //BOTON "+" PARA LOS INPUT DE PROCESO Y TIEMPO DE VIDA
 var btnEliminarProceso= document.getElementById("btnEliminarProceso");  // BOTON X PARA BORRAR LOS VALORES DE LOS INPUT
 var valorCambio= document.getElementById("valorCambio");  //INPUT PARA CAPTURAR EL VALOR DE DOLAR PARA LA CONVERSION A PESOS
@@ -16,8 +16,8 @@ document.getElementById('tiempoVida').addEventListener('keydown', function(event
 var seccion3 = document.getElementById("seccion3");
 nombreCategoria.addEventListener("change", modificarFormulario)
 // Datos simulados
-    const items = Array.from({ length: 100}, (_, i) => `Elemento ${i + 1}`);
-    const resultsPerPage = 9;
+    const items = Array.from({ length: 10}, (_, i) => `Elemento ${i + 1}`);
+    const resultsPerPage = 1;
     let currentPage = 1;
 
 // Función para mostrar los divs de los items
@@ -43,29 +43,130 @@ nombreCategoria.addEventListener("change", modificarFormulario)
         const container = document.getElementById('itemContainer');
         container.innerHTML = ''; // Limpiar contenido anterior
 
-            //Listado de los items registrados del catalogo
+                //Listado de los items registrados del catalogo
                 paginatedItems.forEach(item => {
-                    const div = document.createElement('div');
-                    div.className = 'col-12 col-md-6 col-lg-4 mb-4';
-                    div.innerHTML = `<div class="carditemr border border-1 border-dark">
-                                        <div class="d-flex justify-content-between align-items-center text-uppercase px-2 py-0 my-2">
-                                            <p class="py-0 my-0"> <b>${item} </b></p>
-                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                <span class="p-0 m-0">Editar<span>
-                                            </button>
-                                        </div>
+                    const div1 = document.createElement('div');
+                    const div2 = document.createElement('div');
+                    const div3 = document.createElement('div');
+                    const div4 = document.createElement('div');
+                    const div5 = document.createElement('div');
+                    const div6 = document.createElement('div');
 
-                                        <div class="d-flex justify-content-between px-2" style="width:100%" >
-                                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, incidunt repellat pariatur quam quia quo tempora molestiae obcaecati fugit at vero similique maiores eum quis! At quibusdam optio accusantium architecto.</p>
-                                        </div>
+                    div1.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                    div2.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                    div3.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                    div4.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                    div5.className = 'col-12 col-md-6 col-lg-4 mb-4';
+                    div6.className = 'col-12 col-md-6 col-lg-4 mb-4';
 
-                                        <div class="d-flex justify-content-start px-2 py-2">
-                                            <img src="../img/imagen.png" style="width: 100px; height:100px">
-                                        </div>
-                                    </div>`;
+                    div1.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Soporte HLD-45</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Soporte de precisión para herramientas de corte CNC. Fabricado en acero templado.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-toolbox"></i>
+                                </div>
+                            </div>
+                  `;
 
-                    container.appendChild(div);
+                div2.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Fresa Diamantada</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Fresa para acabados de precisión en metales. Diámetro 120mm, revestimiento diamantado.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                            </div>
+                  `;
+
+                div3.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Engranaje EP-78</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Engranaje de precisión para transmisiones industriales. Acero templado, 78 dientes.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                            </div>
+                  `;
+
+                    div4.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Tornillo T-45</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Tornillo de alta resistencia para maquinaria pesada. Acero inoxidable, cabeza hexagonal.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-screwdriver"></i>
+                                </div>
+                            </div>
+                    `;
+
+                    div5.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Bomba Hidráulica</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Bomba hidráulica de alta presión para sistemas de lubricación industrial.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-oil-can"></i>
+                                </div>
+                            </div>
+                    `;
+
+                    div6.innerHTML = `
+                            <div class="item-card">
+                                <div class="item-header">
+                                    <h3 class="item-title">Sensor de Temperatura</h3>
+                                    <button class="btn edit-btn" type="button">
+                                        <i class="fas fa-pencil-alt"></i> Editar
+                                    </button>
+                                </div>
+                                <p class="item-description">
+                                    Sensor de temperatura industrial con rango de -50°C a 250°C. Salida digital.
+                                </p>
+                                <div class="item-image">
+                                    <i class="fas fa-thermometer-half"></i>
+                                </div>
+                            </div>
+                    `;
+
+                    container.appendChild(div1);
+                    container.appendChild(div2);
+                    container.appendChild(div3);
+                    container.appendChild(div4);
+                    container.appendChild(div5);
+                    container.appendChild(div6);
                 });  
             //Fin Listado de los items registrados del catalogo
             
@@ -104,7 +205,7 @@ nombreCategoria.addEventListener("change", modificarFormulario)
     const prevBtn = document.getElementById('prevBtn'); //Boton de regreso
     const nextBtn = document.getElementById('nextBtn'); //Boton de adelante
     const sendBtn = document.getElementById('sendBtn'); //Envio de formulario
-    var miFormulario = document.getElementById('miFormulario'); //FORMULARIO PARA AGREGAR UN ITMEM
+    var miFormulario = document.getElementById('formularioAgregar'); //FORMULARIO PARA AGREGAR UN ITMEM
 
     let currentStep = 0;
 
@@ -207,13 +308,19 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                 method: 'POST',
                 body: formData
             };
-    
-            console.log(formData);
             fetch('../api/catalogo.php', requestOptions)
-                .then(response => response.text())
+                .then(response => response.json())
                 .then((data) => {
-                    console.log(data);
-
+                    if(data.OK) {
+                            console.log(data.OK)
+                        fetch('../api/inventario.php', requestOptions)
+                        .then(response => response.text())
+                        .then((data) => {
+                                alert(data)
+                        }).catch(error => {
+                            console.log('Error:', error);
+                        })
+                    }
                 }).catch(error => {
                     console.log('Error:', error);
                 })
