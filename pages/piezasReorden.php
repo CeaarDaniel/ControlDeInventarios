@@ -24,6 +24,200 @@
    
     <!--Custom css -->
     <link rel="stylesheet" href="../styles/style.css">
+
+     <style>
+        :root {
+            --primary: #a2d2ff;
+            --secondary: #ffafcc;
+            --accent: #cdb4db;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #bde0fe;
+            --warning: #ffd166;
+            --danger: #ff9aa2;
+            --info: #c7f9cc;
+        }
+
+        
+    
+        
+        .header h1 {
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .search-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-form select, .search-form button {
+            border-radius: 30px;
+            border: none;
+        }
+        
+        .search-form select {
+            flex-grow: 1;
+            padding: 10px 20px;
+            background-color: var(--light);
+            min-width: 250px;
+        }
+        
+        .search-form button {
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 25px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .search-form button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .search-form button i {
+            margin-right: 8px;
+        }
+        
+        .inventory-container {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-height: 65vh;
+            overflow-y: auto;
+        }
+        
+        .inventory-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .inventory-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .inventory-container::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .inventory-card {
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .inventory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .status-indicator {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .warning {
+            color: var(--warning);
+        }
+        
+        .danger {
+            color: var(--danger);
+        }
+        
+        .item-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .item-image i {
+            font-size: 3.5rem;
+            color: var(--accent);
+            background: rgba(205, 180, 219, 0.2);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .item-details {
+            padding-left: 1.5rem;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .detail-item {
+            margin-bottom: 0.8rem;
+            display: flex;
+        }
+        
+        .detail-item i {
+            width: 25px;
+            color: var(--primary);
+            margin-right: 10px;
+        }
+        
+        .detail-label {
+            font-weight: 500;
+            color: var(--dark);
+            min-width: 120px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .search-form select, .search-form button {
+                width: 100%;
+            }
+            
+            .item-details {
+                padding-left: 0;
+                padding-top: 1.5rem;
+            }
+            
+            .detail-item {
+                flex-direction: column;
+            }
+            
+            .detail-label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>

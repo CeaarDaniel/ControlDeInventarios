@@ -17,141 +17,158 @@
 
 <hr class="mx-0 px-0">
 
-<!--- Piesas arrojadas por la busqueda --->
-    <div class="mt-4 mb-2" style="width:100%; max-height:100%; overflow-y:auto; border-radius: 20px;">
-        <div class="row mx-5 my-1 py-2" style="border-bottom: 2px #ccc; border-right: 2px #ccc; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); border-radius:10px">
-            <div class="col-12 col-md-2 ">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <input class="check" type="checkbox" value="" id="">
-                    <span style="font-size: 40px; color: orange;">&#9888;&#65039;</span>
-                </div>
-            </div>
-            <div class="col-12 col-md-2 py-2">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <i class="fa-solid fa-image" style="font-size:80px; color:blue;"></i>
-                <!-- <img src="./img/Auto.png" style="max-width:100%; max-height:200px"> -->
-                </div>
-            </div>
-            <div class="col-12 col-md-8">
-             <label class="my-3"><b>NOMBRE MODELO DE LA PIEZA</b></label>
-                <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                DESCRIPCION Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat vitae dolorem consectetur consequuntur corporis possimus.
-                            </div>    
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                CANTIDAD DE STOCK
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                FECHA DE COMPRA
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">  
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                PROCESO
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                UBICACION
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mx-5 my-1 py-2" style="border-bottom: 2px #ccc; border-right: 2px #ccc; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); border-radius:10px">
-            <div class="col-12 col-md-2 ">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <input class="check" type="checkbox" value="" id="">
-                    <span style="font-size: 40px; color: red;">&#10071;</span> 
-                </div>
-            </div>
-            <div class="col-12 col-md-2 py-2">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <i class="fa-solid fa-image" style="font-size:80px; color:blue;"></i>
-                <!--  <img src="./img/Auto.png" style="max-width:100%; max-height:200px"> -->
-                </div>
-            </div>
-            <div class="col-12 col-md-8">
-                <label class="my-3"><b>NOMBRE MODELO DE LA PIEZA</b></label>
+    <!-- Resultados de inventario -->
+            <div class="inventory-container">
+                <!-- Tarjeta de inventario 1 -->
+                <div class="inventory-card" style="background: rgba(255, 175, 204, 0.1);">
                     <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                    DESCRIPCION Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat vitae dolorem consectetur consequuntur corporis possimus,
-                                </div>    
+                        <div class="col-md-1 d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="item1">
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                    CANTIDAD DE STOCK
+                        </div>
+                        <div class="col-md-1 status-indicator">
+                            <i class="fas fa-exclamation-triangle warning"></i>
+                        </div>
+                        <div class="col-md-2 item-image">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <div class="col-md-8 item-details">
+                            <h3 class="item-title">Soporte para Herramienta HLD-45</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="detail-label">Descripción:</span>
+                                        <span>Soporte de alta precisión para herramientas de corte</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-layer-group"></i>
+                                        <span class="detail-label">Stock:</span>
+                                        <span class="badge bg-warning">5 unidades</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="detail-label">Fecha compra:</span>
+                                        <span>15/03/2023</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span class="detail-label">Proceso:</span>
+                                        <span>Mecanizado CNC</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="detail-label">Ubicación:</span>
+                                        <span>Almacén B, Estante 4</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                    FECHA DE COMPRA
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">  
-                                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                    PROCESO
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                    UBICACION
-                                </div>
-                            </div>
+                        </div>
                     </div>
-            </div>
-        </div>
-
-        <div class="row mx-5 my-1 py-2" style="border-bottom: 2px #ccc; border-right: 2px #ccc; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); border-radius:10px">
-            <div class="col-6 col-md-2">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <input class="check" type="checkbox" value="" id="">
-                    <span style="font-size: 40px; color: red;">&#10071;</span> 
+                </div>
+                
+                <!-- Tarjeta de inventario 2 -->
+                <div class="inventory-card" style="background: rgba(255, 154, 162, 0.1);">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="item2">
+                            </div>
+                        </div>
+                        <div class="col-md-1 status-indicator">
+                            <i class="fas fa-exclamation-circle danger"></i>
+                        </div>
+                        <div class="col-md-2 item-image">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="col-md-8 item-details">
+                            <h3 class="item-title">Engranaje de Precisión EP-78</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="detail-label">Descripción:</span>
+                                        <span>Engranaje de acero templado para transmisiones</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-layer-group"></i>
+                                        <span class="detail-label">Stock:</span>
+                                        <span class="badge bg-danger">2 unidades</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="detail-label">Fecha compra:</span>
+                                        <span>22/05/2023</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span class="detail-label">Proceso:</span>
+                                        <span>Ensamblaje final</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="detail-label">Ubicación:</span>
+                                        <span>Almacén A, Estante 7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de inventario 3 -->
+                <div class="inventory-card" style="background: rgba(162, 210, 255, 0.1);">
+                    <div class="row">
+                        <div class="col-md-1 d-flex align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="item3">
+                            </div>
+                        </div>
+                        <div class="col-md-1 status-indicator">
+                            <i class="fas fa-check-circle" style="color: #8ac926;"></i>
+                        </div>
+                        <div class="col-md-2 item-image">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="col-md-8 item-details">
+                            <h3 class="item-title">Fresa Diamantada FD-120</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="detail-label">Descripción:</span>
+                                        <span>Fresa para acabados de precisión en metales</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-layer-group"></i>
+                                        <span class="detail-label">Stock:</span>
+                                        <span class="badge bg-success">24 unidades</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span class="detail-label">Fecha compra:</span>
+                                        <span>10/01/2024</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span class="detail-label">Proceso:</span>
+                                        <span>Acabado superficial</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="detail-label">Ubicación:</span>
+                                        <span>Almacén C, Estante 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 col-md-2 py-2">
-                <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                    <i class="fa-solid fa-image" style="color:blue; font-size:80px"></i>
-                    <!-- <img src="./img/Auto.png" style="max-width:100%; max-height:200px"> -->
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-8">
-                <label class="my-3"><b>NOMBRE MODELO DE LA PIEZA</b></label>
-                <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                DESCRIPCION Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repellat vitae dolorem consectetur consequuntur corporis possimus,
-                            </div>    
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                CANTIDAD DE STOCK
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                FECHA DE COMPRA
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">  
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                PROCESO
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <div class="d-flex align-items-center justify-content-center" style="height:100%">
-                                UBICACION
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--- Fin Piesas arrojadas por la busqueda --->
