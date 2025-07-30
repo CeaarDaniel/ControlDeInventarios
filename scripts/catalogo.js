@@ -63,9 +63,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Soporte HLD-45</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Soporte de precisión para herramientas de corte CNC. Fabricado en acero templado.
@@ -80,9 +81,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Fresa Diamantada</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Fresa para acabados de precisión en metales. Diámetro 120mm, revestimiento diamantado.
@@ -97,9 +99,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Engranaje EP-78</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Engranaje de precisión para transmisiones industriales. Acero templado, 78 dientes.
@@ -114,9 +117,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Tornillo T-45</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Tornillo de alta resistencia para maquinaria pesada. Acero inoxidable, cabeza hexagonal.
@@ -131,9 +135,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Bomba Hidráulica</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                             <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Bomba hidráulica de alta presión para sistemas de lubricación industrial.
@@ -148,9 +153,10 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Sensor de Temperatura</h3>
-                                    <button class="btn edit-btn" type="button">
-                                        <i class="fas fa-pencil-alt"></i> Editar
-                                    </button>
+                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                                <span class="p-0 m-0">Editar<span>
+                                            </button>
                                 </div>
                                 <p class="item-description">
                                     Sensor de temperatura industrial con rango de -50°C a 250°C. Salida digital.

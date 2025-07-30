@@ -43,7 +43,7 @@
         
         
         .dashboard-header {
-            background: linear-gradient(135deg, var(--primary), #1a1a8d);
+            background: linear-gradient(135deg, var(--primary), #43004f);
             color: white;
             border-radius: 15px;
             padding: 1.5rem;

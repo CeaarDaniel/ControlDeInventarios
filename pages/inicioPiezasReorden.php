@@ -20,7 +20,7 @@
     <!-- Resultados de inventario -->
             <div class="inventory-container">
                 <!-- Tarjeta de inventario 1 -->
-                <div class="inventory-card" style="background: rgba(255, 175, 204, 0.1);">
+                <div class="inventory-card" style="background: rgba(252, 243, 166, 0.8);">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center">
                             <div class="form-check">
@@ -71,7 +71,7 @@
                 </div>
                 
                 <!-- Tarjeta de inventario 2 -->
-                <div class="inventory-card" style="background: rgba(255, 154, 162, 0.1);">
+                <div class="inventory-card" style="background: rgba(255, 175, 175, 0.3);">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center">
                             <div class="form-check">
@@ -122,7 +122,7 @@
                 </div>
                 
                 <!-- Tarjeta de inventario 3 -->
-                <div class="inventory-card" style="background: rgba(162, 210, 255, 0.1);">
+                <div class="inventory-card" style="background: rgba(212, 175, 255, 0.3);">
                     <div class="row">
                         <div class="col-md-1 d-flex align-items-center">
                             <div class="form-check">
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="col-md-1 status-indicator">
-                            <i class="fas fa-check-circle" style="color: #8ac926;"></i>
+                            <i class="fas fa-check-circle" style="color: --var(dark)"></i>
                         </div>
                         <div class="col-md-2 item-image">
                             <i class="fas fa-tools"></i>

@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../styles/style.css">
 
      <style>
+        /*
         :root {
             --primary: #a2d2ff;
             --secondary: #ffafcc;
@@ -37,7 +38,31 @@
             --danger: #ff9aa2;
             --info: #c7f9cc;
         }
+        */
 
+       
+        :root {
+                --primary: #2a4d66;     // Azul oscuro profundo
+                --secondary: #802f45;   // Rosa/magenta oscuro 
+                --accent: #5b446a;      // Lavanda/púrpura profundo
+                --light: #a0a1a3;       // Gris claro, más oscuro que el original
+                --dark: #0f1113;        // Casi negro, aún más oscuro que #1c1f23
+                --success: #2f5d78;     // Azul grisáceo más profundo
+                --warning: #7a5c00;     // Amarillo mostaza oscuro
+                --danger: #802f39;      // Rojo oscuro/marrón rojizo
+                --info: #3e6b4f;        /7 Verde profundo y apagado
+
+                #141073
+                #4F378B;
+                --accent: #5b446a; 
+                --light: #a0a1a3;
+                #ECE6F0;
+                #4ecdc4        
+                --dark: #0f1113;   
+            }
+        
+
+            
         
     
         
@@ -119,7 +144,7 @@
             margin-bottom: 1.5rem;
             transition: all 0.3s;
             border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
         
         .inventory-card:hover {
@@ -151,7 +176,7 @@
         .item-image i {
             font-size: 3.5rem;
             color: var(--accent);
-            background: rgba(205, 180, 219, 0.2);
+            background: rgba(199, 166, 218, 0.2);
             border-radius: 50%;
             width: 100px;
             height: 100px;

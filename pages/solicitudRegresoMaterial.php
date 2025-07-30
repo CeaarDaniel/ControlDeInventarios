@@ -11,7 +11,7 @@
             --light-gray: #e9ecef;
             --pastel-blue: #a2d2ff;
             --pastel-pink: #ffafcc;
-            --pastel-purple: #cdb4db;
+            --pastel-purple: #cdb4dbff;
         }
         
         
@@ -67,10 +67,10 @@
         }
         
         .auth-btn {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            background: linear-gradient(135deg, var(--dark), var(--dark));
             color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 15px;
             padding: 10px 30px;
             font-weight: 500;
             font-size: 1.1rem;
@@ -79,7 +79,7 @@
         }
         
         .auth-btn:hover {
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            background: linear-gradient(135deg, var(--gray), var(--gray));
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(7, 3, 139, 0.4);
         }
@@ -266,9 +266,9 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title w-100 text-center">
+                        <h3 class="modal-title w-100 text-center">
                             <i class="fas fa-check-circle me-2"></i>AUTORIZAR REGRESO DE MATERIAL
-                        </h5>
+                        </h3>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -276,9 +276,11 @@
                             ¿Está seguro que desea autorizar este regreso de material?
                         </p>
                         <div class="d-flex justify-content-center gap-3">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             <button class="btn auth-btn">
                                 <i class="fas fa-check me-2"></i>Autorizar
+                            </button>
+                            <button type="button" class="btn auth-btn" data-bs-dismiss="modal">
+                                <i class="fas fa-times" style="font-size:18px"></i> Cancelar
                             </button>
                         </div>
                     </div>
@@ -376,8 +378,8 @@
                 </div>
                 
                 <div class="request-actions">
-                    <button class="btn auth-btn" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
-                        <i class="fas fa-check-circle me-2"></i>Autorizar Regreso
+                    <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
+                        <i class="fas fa-check-circle me-2"></i><span style="font-size:16px;">Autorizar Regreso</span>
                     </button>
                 </div>
             </div>
@@ -433,8 +435,8 @@
                 </div>
                 
                 <div class="request-actions">
-                    <button class="btn auth-btn" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
-                        <i class="fas fa-check-circle me-2"></i>Autorizar Regreso
+                    <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
+                        <i class="fas fa-check-circle me-2"></i><span style="font-size:16px;"> Autorizar Regreso</span>
                     </button>
                 </div>
             </div>
@@ -490,8 +492,8 @@
                 </div>
                 
                 <div class="request-actions">
-                    <button class="btn auth-btn" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
-                        <i class="fas fa-check-circle me-2"></i>Autorizar Regreso
+                    <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalAutorizarRegreso">
+                        <i class="fas fa-check-circle me-2"></i> <span style="font-size:16px;">Autorizar Regreso</span>
                     </button>
                 </div>
             </div>

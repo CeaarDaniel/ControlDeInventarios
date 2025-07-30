@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Material</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #eef2f7 0%, #e6ecf5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Formas decorativas sutiles */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(7, 3, 139, 0.05) 0%, rgba(78, 205, 196, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.05) 0%, rgba(7, 3, 139, 0.05) 100%);
+            z-index: -1;
+        }
+        
+        .form-container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(7, 3, 139, 0.15);
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Patrón decorativo en el encabezado */
+        .form-header {
+            background: linear-gradient(135deg, #07038b, #2c2ca0);
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-header::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-header h2 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-header h2 i {
+            margin-right: 15px;
+            font-size: 32px;
+        }
+        
+        .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #4ecdc4, #2c2ca0);
+            z-index: 2;
+        }
+        
+        .form-content {
+            padding: 30px;
+            position: relative;
+        }
+        
+        /* Decoración de esquina */
+        .corner-decoration {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 80px 80px;
+            border-color: transparent transparent #07038b transparent;
+            opacity: 0.1;
+        }
+        
+        .section-header {
+            position: relative;
+            padding: 15px 0 10px;
+            margin: 25px 0 20px;
+            border-bottom: 2px solid rgba(7, 3, 139, 0.1);
+        }
+        
+        .section-header h3 {
+            font-weight: 600;
+            color: #07038b;
+            margin: 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-header h3 i {
+            margin-right: 12px;
+            color: #4ecdc4;
+            font-size: 24px;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #07038b, #4ecdc4);
+            border-radius: 3px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .form-group {
+            flex: 0 0 50%;
+            padding: 0 15px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .form-group {
+                flex: 0 0 100%;
+            }
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #07038b;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-label i {
+            margin-right: 10px;
+            min-width: 24px;
+            color: #2c2ca0;
+            font-size: 18px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px 14px 50px;
+            border: 1px solid #d1d9e6;
+            border-radius: 10px;
+            background: #f8f9fc;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: #333;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+            background: white;
+        }
+        
+        .input-icon-container {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #2c2ca0;
+            font-size: 20px;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .form-btn {
+            border-radius: 50px;
+            padding: 14px 40px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .form-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+        
+        .form-btn:hover::before {
+            transform: translateX(0);
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #07038b, #2c2ca0);
+            color: white;
+            box-shadow: 0 6px 15px rgba(7, 3, 139, 0.3);
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(7, 3, 139, 0.4);
+        }
+        
+        .btn-reset {
+            background: white;
+            color: #07038b;
+            border: 2px solid #d1d9e6;
+        }
+        
+        .btn-reset:hover {
+            background: #f8f9fc;
+            transform: translateY(-3px);
+            border-color: #07038b;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #ff6b6b;
+        }
+        
+        /* Elemento decorativo en el contenido */
+        .form-decoration {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(7, 3, 139, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        /* Animaciones sutiles */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .form-header h2 i {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2><i class="fas fa-dolly"></i> ENTRADA DE MATERIAL</h2>
+        </div>
+        
+        <div class="form-content">
+            <div class="corner-decoration"></div>
+            <div class="form-decoration"></div>
+            
+            <form id="formulario-llenado">
+                <!-- Sección de Información de la Pieza -->
+                <div class="section-header">
+                    <h3><i class="fas fa-box"></i> INFORMACIÓN DE LA PIEZA</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="CODIGO_SHOP">
+                            <i class="fas fa-tag"></i> TIPO DE PIEZA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-list input-icon"></i>
+                            <select class="form-control" name="CODIGO_SHOP" id="CODIGO_SHOP" required>
+                                <option value="" selected>--- CATEGORÍA ---</option>
+                                <option value="">HOLDERS</option>
+                                <option value="">HERRAMIENTAS</option>
+                                <option value="">REFACCIONES</option>
+                                <option value="">CONSUMIBLES</option>
+                                <option value="">INSERTOS</option>
+                                <option value="">TORNILLOS</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="factura">
+                            <i class="fas fa-file-invoice"></i> FACTURA DE COMPRA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-receipt input-icon"></i>
+                            <input class="form-control" id="factura" name="factura" type="text" placeholder="Factura de compra">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="codigo_pieza">
+                            <i class="fas fa-barcode"></i> CÓDIGO DE LA PIEZA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-qrcode input-icon"></i>
+                            <input class="form-control" id="codigo_pieza" name="codigo_pieza" type="text" placeholder="Código">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required" for="nombre_pieza">
+                            <i class="fas fa-cube"></i> NOMBRE DE LA PIEZA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-font input-icon"></i>
+                            <input class="form-control" id="nombre_pieza" name="nombre_pieza" type="text" placeholder="Nombre de la pieza" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="proveedor">
+                            <i class="fas fa-truck"></i> PROVEEDOR
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-building input-icon"></i>
+                            <input class="form-control" id="proveedor" name="proveedor" type="text" placeholder="Proveedor">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="linea">
+                            <i class="fas fa-industry"></i> LÍNEA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-sliders-h input-icon"></i>
+                            <input class="form-control" type="text" name="linea" id="linea" placeholder="Línea" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="proceso">
+                            <i class="fas fa-cogs"></i> PROCESO
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-tasks input-icon"></i>
+                            <input class="form-control" type="text" name="proceso" id="proceso" placeholder="Proceso" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="rack">
+                            <i class="fas fa-warehouse"></i> RACK
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-pallet input-icon"></i>
+                            <input class="form-control" type="text" name="rack" id="rack" placeholder="Rack" readonly>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sección de Detalles de la Compra -->
+                <div class="section-header">
+                    <h3><i class="fas fa-file-invoice-dollar"></i> DETALLES DE LA COMPRA</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="cantidad">
+                            <i class="fas fa-layer-group"></i> CANTIDAD
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-calculator input-icon"></i>
+                            <input class="form-control" id="cantidad" name="cantidad" type="text" placeholder="Cantidad" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="costo_dolares">
+                            <i class="fas fa-dollar-sign"></i> COSTO EN DÓLARES
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-money-bill-wave input-icon"></i>
+                            <input class="form-control" id="costo_dolares" name="costo_dolares" type="text" placeholder="Costo en dólares">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="costo_total">
+                            <i class="fas fa-calculator"></i> COSTO TOTAL
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-file-invoice-dollar input-icon"></i>
+                            <input class="form-control" id="costo_total" name="costo_total" type="text" placeholder="Costo total">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="valor_cambio">
+                            <i class="fas fa-exchange-alt"></i> VALOR DE CAMBIO
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-chart-line input-icon"></i>
+                            <input class="form-control" id="valor_cambio" name="valor_cambio" type="text" placeholder="Valor de cambio">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="fecha_compra">
+                            <i class="fas fa-calendar-alt"></i> FECHA DE COMPRA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-clock input-icon"></i>
+                            <input class="form-control" id="fecha_compra" name="fecha_compra" type="text" placeholder="Fecha de compra">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="costo_pesos">
+                            <i class="fas fa-peso-sign"></i> COSTO EN PESOS
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-money-bill input-icon"></i>
+                            <input class="form-control" id="costo_pesos" name="costo_pesos" type="text" placeholder="Costo en pesos">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sección de Información de Quién Recibe -->
+                <div class="section-header">
+                    <h3><i class="fas fa-user-tie"></i> INFORMACIÓN DE QUIÉN RECIBE</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="nomina">
+                            <i class="fas fa-id-card"></i> NÚMERO DE NÓMINA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-hashtag input-icon"></i>
+                            <input class="form-control" id="nomina" name="nomina" type="text" placeholder="Número de nómina">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="nombre_recibe">
+                            <i class="fas fa-user"></i> NOMBRE DE QUIÉN RECIBIÓ
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-signature input-icon"></i>
+                            <input class="form-control" id="nombre_recibe" name="nombre_recibe" type="text" placeholder="Nombre del que recibe">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="fecha_registro">
+                            <i class="fas fa-calendar-check"></i> FECHA DE REGISTRO DE LA COMPRA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-clock input-icon"></i>
+                            <input class="form-control" id="fecha_registro" name="fecha_registro" type="text" placeholder="Fecha de registro de la compra">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="nombre_registra">
+                            <i class="fas fa-user-edit"></i> NOMBRE DE QUIÉN REGISTRÓ LA COMPRA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-signature input-icon"></i>
+                            <input class="form-control" id="nombre_registra" name="nombre_registra" type="text" placeholder="Nombre de quien registró la compra">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="usuario_registra">
+                            <i class="fas fa-user-cog"></i> USUARIO QUE REGISTRÓ LA COMPRA
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-user input-icon"></i>
+                            <input class="form-control" id="usuario_registra" name="usuario_registra" type="text" placeholder="Usuario que registra la compra">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botones de Acción -->
+                <div class="form-actions">
+                    <button type="submit" class="form-btn btn-submit">
+                        <i class="fas fa-save"></i> Guardar Entrada
+                    </button>
+                    <button type="reset" class="form-btn btn-reset">
+                        <i class="fas fa-undo"></i> Limpiar Formulario
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Animación para el formulario
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.form-container');
+            form.style.opacity = '0';
+            form.style.transform = 'translateY(30px)';
+            form.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+                form.style.opacity = '1';
+                form.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Efecto hover en los campos
+            const inputs = document.querySelectorAll('.form-control');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.boxShadow = '0 0 0 3px rgba(78, 205, 196, 0.3)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.boxShadow = 'inset 0 2px 5px rgba(0,0,0,0.05)';
+                });
+            });
+            
+            // Efecto hover en botones
+            const buttons = document.querySelectorAll('.form-btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -18,6 +18,7 @@
 
     <!--Inicio Formulario de registro de proovedores -->
         <div class="d-flex justify-content-center" style="width:100%">
+            <!--
                 <form id="registroProveedores" class="formBuscarPieza" style="width:100%">
                     <div class="row">
                         <div class="col-12 col-sm-6 my-1 mx-0 py-0 text-start text-sm-end">
@@ -48,7 +49,73 @@
                             <span>Registrar</span>
                         </button>
                     </div>
-                </form>
+                </form> --> 
+
+                 <div class="form-content">
+            <div class="corner-decoration"></div>
+            <div class="form-decoration"></div>
+            <div class="form-decoration-2"></div>
+            
+            <form id="registroProveedores">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label required" for="nombreProveedor">
+                            <i class="fas fa-building"></i> NOMBRE DEL PROVEEDOR
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-signature input-icon"></i>
+                            <input class="form-control" id="nombreProveedor" name="nombreProveedor" type="text" placeholder="Nombre" maxlength="200" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required" for="clasificacion">
+                            <i class="fas fa-tags"></i> CLASIFICACIÓN
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-list input-icon"></i>
+                            <input class="form-control" id="clasificacion" name="clasificacion" type="text" placeholder="Clasificación" maxlength="20" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required" for="tipoTrabajo">
+                            <i class="fas fa-briefcase"></i> TIPO DE TRABAJO
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-tasks input-icon"></i>
+                            <input class="form-control" id="tipoTrabajo" name="tipoTrabajo" type="text" placeholder="Tipo de trabajo" maxlength="100" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="descripcionTrabajo">
+                            <i class="fas fa-file-alt"></i> DESCRIPCIÓN DE TRABAJO
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-align-left input-icon"></i>
+                            <input class="form-control" id="descripcionTrabajo" name="descripcionTrabajo" type="text" placeholder="Descripción de trabajo" maxlength="100">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="observaciones">
+                            <i class="fas fa-sticky-note"></i> OBSERVACIONES
+                        </label>
+                        <div class="input-icon-container">
+                            <i class="fas fa-comment-dots input-icon"></i>
+                            <textarea class="form-control" id="observaciones" name="observaciones" placeholder="Observaciones" maxlength="100"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="form-btn">
+                        <i class="fas fa-cash-register"></i> Registrar Proveedor
+                    </button>
+                </div>
+            </form>
+        </div>
         </div>
     <!--Fin Formulario de registro de proovedores -->
 

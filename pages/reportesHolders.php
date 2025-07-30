@@ -167,9 +167,11 @@
         </div>
         
         <!-- Botón de Exportar -->
-        <button class="export-btn">
-            <i class="fas fa-file-export"></i> Exportar Reporte Completo
-        </button>
+        <div class="d-flex justify-content-center">
+            <button class="btn btnBuscar py-2">
+                <i class="fas fa-file-export" style="font-size:25px;"></i> <span class=" fs-5"> Exportar Reporte</span>
+            </button>
+        </div>
     </div>
 
 

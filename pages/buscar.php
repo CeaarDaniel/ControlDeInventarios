@@ -27,22 +27,23 @@
 
        <style>
         :root {
-            --primary: #a2d2ff;
-            --secondary: #ffafcc;
-            --accent: #cdb4db;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --success: #bde0fe;
-            --warning: #ffd166;
-            --danger: #ff9aa2;
-            --info: #c7f9cc;
+            --primary: #2a4d66; 
+            --secondary: #802f45;  
+            --accent: #5b446a;      
+            --light: #a0a1a3;       
+            --dark: #0f1113;        
+            --success: #2f5d78;     
+            --warning: #7a5c00;     
+            --danger: #802f39;      
+            --info: #3e6b4f;        
             --pastel-blue: #a2d2ff;
             --pastel-pink: #ffafcc;
-            --pastel-purple: #cdb4db;
+            --pastel-purple: #331a42ff;
             --pastel-green: #c7f9cc;
             --pastel-yellow: #ffd166;
         }
-  
+
+        
         .custom-header {
             background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-purple));
             color: white;
@@ -202,17 +203,17 @@
         
         .result-card.warning {
             border-left: 4px solid var(--pastel-yellow);
-            background-color: rgba(255, 209, 102, 0.08);
+            background-color: rgba(252, 243, 166, 0.8);
         }
         
         .result-card.danger {
             border-left: 4px solid var(--pastel-pink);
-            background-color: rgba(255, 154, 162, 0.08);
+            background-color: rgba(255, 175, 175, 0.3);;
         }
         
         .result-card.success {
             border-left: 4px solid var(--pastel-green);
-            background-color: rgba(199, 249, 204, 0.2);
+            background-color: rgba(132, 247, 143, 0.2);
         }
         
         .status-indicator {
@@ -283,12 +284,12 @@
         
         .detail-label {
             font-weight: 500;
-            color: #6c757d;
+            color: #000000ff;
             min-width: 100px;
         }
         
         .detail-value {
-            color: #495057;
+            color: #303438ff;
             font-weight: 500;
         }
         
@@ -425,7 +426,7 @@
             <!-- Resultados de búsqueda -->
                 <div class="results-container">
                     <h5 class="mb-4 text-center" style="color: var(--pastel-purple); font-weight: 600;">
-                        <i class="fas fa-list me-2"></i>RESULTADOS DE BÚSQUEDA
+                        RESULTADOS DE BÚSQUEDA
                     </h5>
                     
                     <!-- Resultado 1 - Advertencia -->
