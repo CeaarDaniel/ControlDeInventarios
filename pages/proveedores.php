@@ -25,7 +25,7 @@
     <!--Custom css -->
     <link rel="stylesheet" href="../styles/style.css">
 
-        <style>        
+    <style>        
         .form-container {
             width: 100%;
             max-width: 800px;
@@ -39,7 +39,8 @@
         
         /* Patrón decorativo en el encabezado */
         .form-header {
-            background: linear-gradient(135deg, #07038b, #2c2ca0);
+         
+            background: linear-gradient(135deg, #07038b, #43004f);
             color: white;
             padding: 25px 40px;
             text-align: center;
@@ -125,7 +126,7 @@
         .form-label {
             display: block;
             font-weight: 600;
-            color: #07038b;
+            color: #331a42ff;
             margin-bottom: 10px;
             font-size: 16px;
             display: flex;
@@ -135,7 +136,7 @@
         .form-label i {
             margin-right: 10px;
             min-width: 24px;
-            color: #2c2ca0;
+            color: #4F378B;
             font-size: 18px;
         }
         
@@ -172,7 +173,7 @@
             left: 18px;
             top: 50%;
             transform: translateY(-50%);
-            color: #2c2ca0;
+            color: #4F378B;
             font-size: 20px;
         }
         
@@ -185,8 +186,8 @@
         }
         
         .form-btn {
-            border-radius: 50px;
-            padding: 14px 40px;
+            border-radius: 15px;
+            padding: 10px 20px;
             font-weight: 600;
             font-size: 18px;
             transition: all 0.3s;
@@ -198,9 +199,9 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
-            background: linear-gradient(135deg, #07038b, #2c2ca0);
+            background: #141073;
             color: white;
-            box-shadow: 0 6px 15px rgba(7, 3, 139, 0.3);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 1);
         }
         
         .form-btn::before {

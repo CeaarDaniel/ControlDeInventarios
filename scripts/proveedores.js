@@ -71,11 +71,14 @@ function actualizarProveedor(event){
     var observaciones = boton.getAttribute('data-observaciones');
 
     modalBodyProveedor.innerHTML = `<div class="d-flex justify-content-center" style="width:100%">
+                                            <div class="corner-decoration"></div>
+                                        <div class="form-decoration"></div>
+                                        <div class="form-decoration-2"></div>
                                         <!--Fomulario editar proveedor -->
                                             <form id="registroProveedoresUpdate" class="formBuscarPieza" style="width:100%">
                                                 <div class="row">
                                                     <div class="col-12 col-sm-6 my-1">
-                                                        <label for=""><b>NOMBRE DEL PROVEEDOR</b></label> <br>
+                                                        <label class="form-label" for="nombreProveedor">NOMBRE DEL PROVEEDOR</label>
                                                         <input id="nombreProveedorU" name="nombreProveedorU" class="in" type="text" placeholder="&#xf02d; Nombre del Proveedor" maxlength="200" value="${nombreProveedor}">
                                                     </div>
                                                     <div class="col-12 col-sm-6 my-1">
@@ -131,7 +134,7 @@ function actualizarProveedor(event){
                 //Crear el dataTable con las nuevas configuraciones
                 $('#tableProvedores').DataTable({
                     responsive: true,
-                    scrollX: (ancho - 50),
+                    scrollX: 'auto',
                     scrollY: 370,
                     scrollCollapse: true,
                     data: response,
