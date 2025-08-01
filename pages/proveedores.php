@@ -39,7 +39,6 @@
         
         /* Patrón decorativo en el encabezado */
         .form-header {
-         
             background: linear-gradient(135deg, #07038b, #43004f);
             color: white;
             padding: 25px 40px;
@@ -153,6 +152,11 @@
         }
         
         textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        select.form-control {
             min-height: 120px;
             resize: vertical;
         }

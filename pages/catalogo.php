@@ -26,19 +26,7 @@
     <link rel="stylesheet" href="../styles/style.css">
 
        <style>
-        :root {
-            --primary-dark: #07038b;
-            --primary: #1a1a8d;
-            --primary-light: #2c2ca0;
-            --secondary: #ff6b6b;
-            --accent: #4ecdc4;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-        }
-        
-   
+    
         .section-header {
             margin: 2rem 0 1.5rem;
             position: relative;

@@ -27,21 +27,6 @@
     <link rel="stylesheet" href="../styles/style.css">
 
     <style>
-        :root {
-            --primary: #07038b;
-            --secondary: #4ecdc4;
-            --accent: #ff6b6b;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --chart-blue: #1e88e5;
-            --chart-green: #43a047;
-            --chart-orange: #ff9800;
-            --chart-purple: #9c27b0;
-            --chart-red: #e53935;
-            --chart-teal: #00897b;
-        }
-        
-        
         .dashboard-header {
             background: linear-gradient(135deg, var(--primary), #43004f);
             color: white;
@@ -308,7 +293,6 @@
 <!--Custom js -->
 <script src="../scripts/barra_navegacion.js"></script>
 <script src="../scripts/reportes.js"></script>
-
     <script>
             // Animaciones para las tarjetas
             const statCards = document.querySelectorAll('.stat-card');

@@ -25,47 +25,7 @@
     <!--Custom css -->
     <link rel="stylesheet" href="../styles/style.css">
 
-     <style>
-        /*
-        :root {
-            --primary: #a2d2ff;
-            --secondary: #ffafcc;
-            --accent: #cdb4db;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --success: #bde0fe;
-            --warning: #ffd166;
-            --danger: #ff9aa2;
-            --info: #c7f9cc;
-        }
-        */
-
-       
-        :root {
-                --primary: #2a4d66;     // Azul oscuro profundo
-                --secondary: #802f45;   // Rosa/magenta oscuro 
-                --accent: #5b446a;      // Lavanda/púrpura profundo
-                --light: #a0a1a3;       // Gris claro, más oscuro que el original
-                --dark: #0f1113;        // Casi negro, aún más oscuro que #1c1f23
-                --success: #2f5d78;     // Azul grisáceo más profundo
-                --warning: #7a5c00;     // Amarillo mostaza oscuro
-                --danger: #802f39;      // Rojo oscuro/marrón rojizo
-                --info: #3e6b4f;        /7 Verde profundo y apagado
-
-                #141073
-                #4F378B;
-                --accent: #5b446a; 
-                --light: #a0a1a3;
-                #ECE6F0;
-                #4ecdc4        
-                --dark: #0f1113;   
-            }
-        
-
-            
-        
-    
-        
+     <style>   
         .header h1 {
             font-weight: 600;
             margin: 0;

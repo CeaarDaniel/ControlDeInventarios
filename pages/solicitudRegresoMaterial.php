@@ -1,20 +1,4 @@
     <style>
-        :root {
-            --primary-dark: #07038b;
-            --primary: #1a1a8d;
-            --primary-light: #2c2ca0;
-            --secondary: #4ecdc4;
-            --accent: #ff6b6b;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-            --pastel-blue: #a2d2ff;
-            --pastel-pink: #ffafcc;
-            --pastel-purple: #cdb4dbff;
-        }
-        
-        
         .section-title {
             text-align: center;
             margin: 1.5rem 0;

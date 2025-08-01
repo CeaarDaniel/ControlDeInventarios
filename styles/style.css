@@ -2,12 +2,58 @@
     font-family: 'Font Awesome 5 Free';
 }
 
+    :root {
+            --primary-dark: #07038b;
+            --primary: #141073;
+            --primary-light: #2c2ca0;
+            --secondary: #4ecdc4;
+            --accent: #4F378B;
+            --light: #f8f9fa;
+            --dark: #0f1113;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #2f5d78;     
+            --warning: #7a5c00;     
+            --danger: #802f39;      
+            --info: #3e6b4f;        
+            --pastel-blue: #a2d2ff;
+            --pastel-pink: #ffafcc;
+            --pastel-purple: #331a42ff;
+            --pastel-green: #c7f9cc;
+            --pastel-yellow: #ffd166;
+            --chart-blue: #1e88e5;
+            --chart-green: #43a047;
+            --chart-orange: #ff9800;
+            --chart-purple: #9c27b0;
+            --chart-red: #e53935;
+            --chart-teal: #00897b;
+
+                 
+          
+            
+      
+            /* BUSCAR 
+              --primary: #1a1a8d;
+              --primary: #2a4d66; 
+              --secondary: #802f45;  
+              --accent: #5b446a; 
+                #ECE6F0
+                #4ecdc4
+              --accent: #ff6b6b;
+              --pastel-purple: #cdb4dbff;  
+              
+              --secondary: #4F378B;
+              --accent: #5b446a;
+              --light-bg: #ECE6F0;
+              --teal: #4ecdc4;
+            */
+          }
+        
 ::selection {
   background-color: #198754;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
 
   .boton{
     background-color: #141073;

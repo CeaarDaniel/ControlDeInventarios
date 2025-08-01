@@ -24,6 +24,266 @@
    
     <!--Custom css -->
     <link rel="stylesheet" href="../styles/style.css">
+
+    <style>
+        .form-container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(7, 3, 139, 0.15);
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Patrón decorativo en el encabezado */
+        .form-header {
+            background: linear-gradient(135deg, #07038b, #43004f);
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-header::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-header h2 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-header h2 i {
+            margin-right: 15px;
+            font-size: 32px;
+        }
+        
+        .form-content {
+            padding: 30px;
+            position: relative;
+        }
+        
+        /* Decoración de esquina */
+        .corner-decoration {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 80px 80px;
+            border-color: transparent transparent #07038b transparent;
+            opacity: 0.1;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .form-group {
+            flex: 0 0 50%;
+            padding: 0 15px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .form-group {
+                flex: 0 0 100%;
+            }
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #331a42ff;
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-label i {
+            margin-right: 10px;
+            min-width: 24px;
+            color: #4F378B;
+            font-size: 18px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 18px 14px 50px;
+            border: 1px solid #d1d9e6;
+            border-radius: 10px;
+            background: #f8f9fc;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: #333;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .form-select{
+            width: 100%;
+            border: 1px solid #d1d9e6;
+            border-radius: 10px;
+            background-color: #f8f9fc;
+            transition: all 0.4s;
+            color: #333;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+
+        .form-control:focus{
+            outline: none;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+            background: white;
+        }
+
+        .form-select:focus{
+            border-color: #4ecdc4;
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+        }
+        
+        .input-icon-container {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #4F378B;
+            font-size: 20px;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .form-btn {
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: #141073;
+            color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 1);
+        }
+        
+        .form-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 0.3s;
+        }
+        
+        .form-btn:hover::before {
+            transform: translateX(0);
+        }
+        
+        .form-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(7, 3, 139, 0.4);
+        }
+        
+        .required::after {
+            content: " *";
+            color: #ff6b6b;
+        }
+        
+        /* Elemento decorativo en el contenido */
+        .form-decoration {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, rgba(7, 3, 139, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .form-decoration-2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(7, 3, 139, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+            border-radius: 50%;
+            z-index: -1;
+         }
+       
+        /* Animaciones sutiles */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        
+        .form-header h2 i {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .form-group:nth-child(5) {
+            flex: 0 0 100%;
+        }
+    </style>
 </head>
 
 <body>

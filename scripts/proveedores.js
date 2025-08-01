@@ -91,11 +91,11 @@ function actualizarProveedor(event){
                                                     </div>
                                                     <div class="col-12 col-sm-6 my-1">
                                                         <label for="text"><b>DESCRIPCIÓN DE TRABAJO</b></label><br>
-                                                        <input id="descripcionTrabajoU" name="descripcionTrabajoU" type="text" class="in" placeholder="&#xf095; Descripción de trabajo" maxlength="100" value=${descripcionTrabajo}>
+                                                        <input id="descripcionTrabajoU" name="descripcionTrabajoU" type="text" class="in" placeholder="Descripción de trabajo" maxlength="100" value=${descripcionTrabajo}>
                                                     </div>
                                                     <div class="col-12 col-sm-6 my-1">
                                                         <label for="text"><b>OBSERVACIONES</b></label><br>
-                                                        <textarea id="observacionesU" name="observacionesU" type="text" class="in" placeholder="&#xf0e0; Observaciones" maxlength="100">${observaciones}</textarea>
+                                                        <textarea id="observacionesU" name="observacionesU" type="text" class="in" placeholder="Observaciones" maxlength="100">${observaciones}</textarea>
                                                     </div>
 
                                                     <input id="idProveedor" name="idProveedor" type="hidden" value="${idProveedor}">

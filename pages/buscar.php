@@ -26,24 +26,6 @@
     <link rel="stylesheet" href="../styles/style.css">
 
        <style>
-        :root {
-            --primary: #2a4d66; 
-            --secondary: #802f45;  
-            --accent: #5b446a;      
-            --light: #a0a1a3;       
-            --dark: #0f1113;        
-            --success: #2f5d78;     
-            --warning: #7a5c00;     
-            --danger: #802f39;      
-            --info: #3e6b4f;        
-            --pastel-blue: #a2d2ff;
-            --pastel-pink: #ffafcc;
-            --pastel-purple: #331a42ff;
-            --pastel-green: #c7f9cc;
-            --pastel-yellow: #ffd166;
-        }
-
-        
         .custom-header {
             background: linear-gradient(135deg, var(--pastel-blue), var(--pastel-purple));
             color: white;
