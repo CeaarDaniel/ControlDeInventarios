@@ -25,7 +25,7 @@
     <!--Custom css -->
     <link rel="stylesheet" href="../styles/style.css">
 
-    <style>        
+    <style>
         .form-container {
             width: 100%;
             max-width: 800px;

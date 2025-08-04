@@ -192,7 +192,7 @@
                         <!--RACK/GABETA -->
                         <div class="row px-0 mx-0 my-3">
                             <div class="col-12 d-flex justify-content-center align-items-center px-0">
-                                <label><b>RACK/GABETA</b></label>
+                                <label><b>RACK/GAVETA</b></label>
                             </div>
                             <div class="col-12 d-flex justify-content-center">
                                 <input class="in" name="rackGabeta" id="rackGabeta" maxlength="50" placeholder="&#xf233; Rack">

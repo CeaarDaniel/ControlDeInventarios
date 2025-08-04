@@ -44,7 +44,7 @@ nombreCategoria.addEventListener("change", modificarFormulario)
         container.innerHTML = ''; // Limpiar contenido anterior
 
                 //Listado de los items registrados del catalogo
-                paginatedItems.forEach(item => {
+                paginatedItems.forEach((item) => {
                     const div1 = document.createElement('div');
                     const div2 = document.createElement('div');
                     const div3 = document.createElement('div');
@@ -59,7 +59,7 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                     div5.className = 'col-12 col-md-6 col-lg-4 mb-4';
                     div6.className = 'col-12 col-md-6 col-lg-4 mb-4';
 
-                    div1.innerHTML = `
+                div1.innerHTML = `
                             <div class="item-card">
                                 <div class="item-header">
                                     <h3 class="item-title">Soporte HLD-45</h3>
@@ -113,59 +113,59 @@ nombreCategoria.addEventListener("change", modificarFormulario)
                             </div>
                   `;
 
-                    div4.innerHTML = `
-                            <div class="item-card">
-                                <div class="item-header">
-                                    <h3 class="item-title">Tornillo T-45</h3>
-                                            <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                <span class="p-0 m-0">Editar<span>
-                                            </button>
-                                </div>
-                                <p class="item-description">
-                                    Tornillo de alta resistencia para maquinaria pesada. Acero inoxidable, cabeza hexagonal.
-                                </p>
-                                <div class="item-image">
-                                    <i class="fas fa-screwdriver"></i>
-                                </div>
+                div4.innerHTML = `
+                        <div class="item-card">
+                            <div class="item-header">
+                                <h3 class="item-title">Tornillo T-45</h3>
+                                        <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                            <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                            <span class="p-0 m-0">Editar<span>
+                                        </button>
                             </div>
-                    `;
+                            <p class="item-description">
+                                Tornillo de alta resistencia para maquinaria pesada. Acero inoxidable, cabeza hexagonal.
+                            </p>
+                            <div class="item-image">
+                                <i class="fas fa-screwdriver"></i>
+                            </div>
+                        </div>
+                `;
 
-                    div5.innerHTML = `
-                            <div class="item-card">
-                                <div class="item-header">
-                                    <h3 class="item-title">Bomba Hidráulica</h3>
-                                             <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                <span class="p-0 m-0">Editar<span>
-                                            </button>
-                                </div>
-                                <p class="item-description">
-                                    Bomba hidráulica de alta presión para sistemas de lubricación industrial.
-                                </p>
-                                <div class="item-image">
-                                    <i class="fas fa-oil-can"></i>
-                                </div>
-                            </div>
-                    `;
-
-                    div6.innerHTML = `
-                            <div class="item-card">
-                                <div class="item-header">
-                                    <h3 class="item-title">Sensor de Temperatura</h3>
+                div5.innerHTML = `
+                        <div class="item-card">
+                            <div class="item-header">
+                                <h3 class="item-title">Bomba Hidráulica</h3>
                                             <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
-                                                <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
-                                                <span class="p-0 m-0">Editar<span>
-                                            </button>
-                                </div>
-                                <p class="item-description">
-                                    Sensor de temperatura industrial con rango de -50°C a 250°C. Salida digital.
-                                </p>
-                                <div class="item-image">
-                                    <i class="fas fa-thermometer-half"></i>
-                                </div>
+                                            <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                            <span class="p-0 m-0">Editar<span>
+                                        </button>
                             </div>
-                    `;
+                            <p class="item-description">
+                                Bomba hidráulica de alta presión para sistemas de lubricación industrial.
+                            </p>
+                            <div class="item-image">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                        </div>
+                `;
+
+                div6.innerHTML = `
+                        <div class="item-card">
+                            <div class="item-header">
+                                <h3 class="item-title">Sensor Temperatura</h3>
+                                        <button class="btn btnBuscar" type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPieza">
+                                            <i class="fas fa-pencil-alt px-1 pt-0 pb-0"></i>
+                                            <span class="p-0 m-0">Editar<span>
+                                        </button>
+                            </div>
+                            <p class="item-description">
+                                Sensor de temperatura industrial con rango de -50°C a 250°C. Salida digital.
+                            </p>
+                            <div class="item-image">
+                                <i class="fas fa-thermometer-half"></i>
+                            </div>
+                        </div>
+                `;
 
                     container.appendChild(div1);
                     container.appendChild(div2);
@@ -217,16 +217,16 @@ nombreCategoria.addEventListener("change", modificarFormulario)
 
     function updateProgress() {
 
-            circles.forEach((circle, index) => {
-                if (index <= currentStep) 
+            circles.forEach((circle, cont) => {
+                if (cont <= currentStep) 
                     circle.classList.add('active');
                     
                 else 
                     circle.classList.remove('active');
             });
 
-            lines.forEach((line, index) => {
-                if (index < currentStep) 
+            lines.forEach((line, cont) => {
+                if (cont < currentStep) 
                     line.classList.add('active');
                 else 
                     line.classList.remove('active');
